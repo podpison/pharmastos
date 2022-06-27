@@ -1,0 +1,16 @@
+@use './../../../v';
+
+.button.button_small {
+  padding-left: 40px;
+  padding-right: 40px;
+  color: v.$green;
+  background-color: white;
+  &:hover:enabled {
+    color: white;
+    background-color: v.$green;
+  }
+  &:disabled {
+    border-color: v.$grayBright;
+    color: v.$gray;
+  } 
+}

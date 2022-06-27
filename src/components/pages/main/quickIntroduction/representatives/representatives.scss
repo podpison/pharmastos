@@ -1,0 +1,17 @@
+.representatives {
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  &__representative {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 207px;
+    height: 207px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 2px;
+    transition: background-color .25s;
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.5);
+    }
+  }
+}

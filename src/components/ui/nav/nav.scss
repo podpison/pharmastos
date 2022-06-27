@@ -1,0 +1,12 @@
+.nav {
+  display: grid;
+  align-items: center;
+  grid-template-columns: max-content 39.5% 10.8% 19.2% 11.7% 3.8%;
+  &__logo {
+    width: 167px;
+    cursor: pointer;
+    img {
+      width: 100%;
+    }
+  }
+}

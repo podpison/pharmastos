@@ -1,0 +1,31 @@
+@use "./../../../../../v";
+
+$spritePath: './../../../../../assets/images/sprites/quickIntroduction_sprite.png';
+
+.representatives__representative {
+  &.representatives__representative_type_0 {
+    margin-left: auto;
+    a:first-child {
+      width: 77px; height: 22px;
+      background: url($spritePath) -204px -10px;
+    }
+    a:last-child {
+      width: 83px; height: 31px;
+      background: url($spritePath) -10px -150px;
+      margin-left: 12px;
+    }
+  }
+  &.representatives__representative_type_1 {
+    div {
+      width: 174px; height: 52px;
+      background: url($spritePath) -10px -10px;
+    }
+  }
+  &.representatives__representative_type_2 {
+    margin-left: auto;
+    div {
+      width: 160px; height: 48px;
+      background: url($spritePath) -10px -82px;
+    }
+  }
+}

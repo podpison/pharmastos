@@ -1,0 +1,42 @@
+@use "./../../../../../v";
+
+.quickIntroduction__article {
+  &-heading {
+    @include v.h1;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 0.42em;
+    position: relative;
+    &::before {
+      content: '';
+      width: 180px;
+      height: 158px;
+      background-image: url(./../../../../../assets/images/favicon.png);
+      display: block;
+      position: absolute;
+      top: -95px;
+      z-index: -1;
+    }
+  }
+  &__texts {
+    width: 95%;
+    &-text {
+      color: white;
+      &:last-child {
+        margin-top: 0.625em;
+      }
+    }
+  }
+  &-button {
+    padding-left: 28px;
+    padding-right: 28px;
+    color: v.$green;
+    background-color: white;
+    border-color: transparent;
+    margin-top: 1.875em;
+    &:hover:enabled {
+      color: white;
+      background-color: v.$green;
+    }
+  }
+}
