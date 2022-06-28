@@ -1,0 +1,53 @@
+@use "./../../../../v";
+
+.aboutUs {
+  @include v.linearBackground;
+  margin-top: 80px;
+  padding: 80px 0;
+  &__descriptionContainer {
+    display: grid;
+    justify-content: space-between;
+    grid-template-columns: max-content 66%;
+    gap: 15px;
+  }
+  &__companyName {
+    @include v.h3;
+    color: white;
+    line-height: 120%;
+    position: relative;
+    &::before {
+      content: '';
+      background-image: url(./../../../../assets/images/favicon.png);
+      width: 140px;
+      height: 123px;
+      display: block;
+      position: absolute;
+      z-index: -1;
+      background-size: cover;
+      top: -60px;
+      left: -2px;
+    }
+  }
+  &__companyDescription {
+    color: white;
+    line-height: 140%;
+  }
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    margin-top: 45px;
+  }
+  &__item {
+    background-color: white;
+    padding: 30px 25px;
+    box-shadow: 2px 2px 19px rgb(0 0 0 / 6%);
+    border-radius: 2px;
+  }
+  // &__itemImg {
+
+  // }
+  &__itemDesciption {
+    margin-top: 10px;
+  }
+}

@@ -1,7 +1,7 @@
 @use "./../../../../../v";
 
-.quickIntroduction__article {
-  &-heading {
+.quickIntroduction {
+  &__articleHeading {
     @include v.h1;
     font-weight: 700;
     color: white;
@@ -14,20 +14,20 @@
       background-image: url(./../../../../../assets/images/favicon.png);
       display: block;
       position: absolute;
-      top: -95px;
+      top: -85px;
       z-index: -1;
     }
   }
-  &__texts {
+  &__articleTexts {
     width: 95%;
-    &-text {
-      color: white;
-      &:last-child {
-        margin-top: 0.625em;
-      }
+  }
+  &__articleText {
+    color: white;
+    &:last-child {
+      margin-top: 0.625em;
     }
   }
-  &-button {
+  &__articleButton {
     padding-left: 28px;
     padding-right: 28px;
     color: v.$green;

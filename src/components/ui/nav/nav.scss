@@ -1,7 +1,18 @@
+@use "./../../../v";
+
 .nav {
-  display: grid;
-  align-items: center;
-  grid-template-columns: max-content 39.5% 10.8% 19.2% 11.7% 3.8%;
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  background-color: white;
+  &__box {
+    @include v.container;
+    display: grid;
+    align-items: center;
+    grid-template-columns: max-content 39.5% 10.8% 19.2% 11.7% 3.8%;
+    @media screen and (max-width: 1200px) {
+      grid-template-columns: max-content max-content 8% 19% 10% 3.8%;
+    }
+  }
   &__logo {
     width: 167px;
     cursor: pointer;

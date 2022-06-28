@@ -6,7 +6,17 @@ $gray: #40474F;
 $grayBright: #ACB7C5;
 $white: #F7F7F8;
 
+@mixin container {
+  max-width: 1190px;
+  margin: auto;
+  padding: 0 10px;
+  @media screen and (max-width: 1200px) {
+    max-width: 1024px;
+  }
+}
+
 @mixin typography($fontWeight: null, $fontSize: null, $uppercase: true) {
+  line-height: 140%;
   @if ($fontWeight != null) {
     font-weight: $fontWeight;
   } @else {
@@ -53,5 +63,6 @@ $white: #F7F7F8;
     height: 100%;
     position: absolute;
     z-index: -1;
+    top: 0;
   }
 }

@@ -1,26 +1,15 @@
-#root {
-  max-width: 1190px;
-  margin: auto;
-  padding: 0 10px;
+@use "./v";
+
+body {
+  overflow-x: hidden;
+  background-color: #E5E5E5;
 }
 
-//about us
-.bg-certificate {
-  width: 36px; height: 50px;
-  background: url('css_sprites.png') -150px -10px;
+#root {
+  @include v.container;
+  margin-bottom: 200px;
 }
-.bg-handWithStar {
-  width: 50px; height: 49px;
-  background: url('css_sprites.png') -80px -10px;
-}
-.bg-pageWithCursor {
-  width: 50px; height: 50px;
-  background: url('css_sprites.png') -10px -10px;
-}
-.bg-handshake {
-  width: 50px; height: 38px;
-  background: url('css_sprites.png') -10px -80px;
-}
+
 //advantages
 .bg-storage {
   width: 50px; height: 45px;

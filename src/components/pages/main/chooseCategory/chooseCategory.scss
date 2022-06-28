@@ -1,0 +1,53 @@
+@use "./../../../../v";
+
+.chooseCategory {
+  &__heading {
+    @include v.h3;
+    margin: 2.5em 0 1.25em;
+  }
+  &__categories {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+  }
+  &__category {
+    position: relative;
+    &:hover {
+      &::after {
+        opacity: .7;
+      }
+    }
+    &::before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(180deg, rgba(0, 0, 0, 0) 32%, rgba(0, 0, 0, 0.7) 91%);
+    }
+    &::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: v.$linear;
+      opacity: 0;
+      transition: opacity .25s;
+    }
+  }
+  &__categoryContent {
+    position: absolute;
+    inset: auto auto 20px 20px;
+    z-index: 1;
+  }
+  &__categoryName {
+    @include v.h4;
+    color: white;
+    line-height: 140%;
+    span {
+      color: white;
+    }
+  }
+  &__arrowRight {
+    margin-left: 16px;
+  }
+}

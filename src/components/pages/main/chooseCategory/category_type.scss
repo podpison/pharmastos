@@ -1,0 +1,24 @@
+$spritePath: url(./../../../../assets/images/sprites/chooseCategory_sprite.png);
+
+.chooseCategory__category {
+  width: 100%;
+  height: 240px;
+  &_type_0 {
+    background: $spritePath -410px -530px;
+  }
+  &_type_1 {
+    background: $spritePath -10px -10px;
+  }
+  &_type_2 {
+    background: $spritePath -410px -10px;
+  }
+  &_type_3 {
+    background: $spritePath -10px -270px;
+  }
+  &_type_4 {
+    background: $spritePath -410px -270px;
+  }
+  &_type_5 {
+    background: $spritePath -10px -530px;
+  }
+}

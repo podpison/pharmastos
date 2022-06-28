@@ -7,11 +7,12 @@ type Props = {
   className?: string
   disabled?: boolean
   small?: boolean
+  onClick?: () => void
 }
 
-export const Button: React.FC<Props> = ({ children, className, disabled = false, small = false }) => {
+export const Button: React.FC<Props> = ({ children, className, disabled = false, small = false, onClick }) => {
   
   let buttonClassNames = classNameHelper('button', {small}, className);
 
-  return <button disabled={disabled} className={buttonClassNames}>{children}</button>
+  return <button onClick={onClick} disabled={disabled} className={buttonClassNames}>{children}</button>
 };

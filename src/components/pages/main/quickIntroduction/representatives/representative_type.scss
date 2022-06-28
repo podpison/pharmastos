@@ -2,8 +2,8 @@
 
 $spritePath: './../../../../../assets/images/sprites/quickIntroduction_sprite.png';
 
-.representatives__representative {
-  &.representatives__representative_type_0 {
+.quickIntroduction__representative {
+  &_type_0 {
     margin-left: auto;
     a:first-child {
       width: 77px; height: 22px;
@@ -15,13 +15,13 @@ $spritePath: './../../../../../assets/images/sprites/quickIntroduction_sprite.pn
       margin-left: 12px;
     }
   }
-  &.representatives__representative_type_1 {
+  &_type_1 {
     div {
       width: 174px; height: 52px;
       background: url($spritePath) -10px -10px;
     }
   }
-  &.representatives__representative_type_2 {
+  &_type_2 {
     margin-left: auto;
     div {
       width: 160px; height: 48px;

@@ -7,15 +7,17 @@ import { Search } from "./search/Search";
 import { Basket } from "./basket/Basket";
 import { Link } from "react-router-dom";
 
-export const Nav: React.FC = ({}) => {
+export const Nav: React.FC = ({ }) => {
   return <nav className="nav">
-    <Link className="nav__logo" to='/'>
-      <img alt='logo' src={logo} />
-    </Link>
-    <PageLinks />
-    <Languages />
-    <Phone />
-    <Search />
-    <Basket />
+    <div className="nav__box">
+      <Link className="nav__logo" to='/'>
+        <img alt='logo' src={logo} />
+      </Link>
+      <PageLinks />
+      <Languages />
+      <Phone />
+      <Search />
+      <Basket />
+    </div>
   </nav>
 };
