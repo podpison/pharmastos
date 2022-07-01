@@ -1,0 +1,41 @@
+$spriteUrl: url(./../../../../assets/images/sprites/benefitsOfGloves_sprite.png);
+
+.gloveAdvantages__advantage_type {
+  &_0 {
+    &::before {
+      min-width: 52px; height: 52px;
+      background: $spriteUrl -10px -82px;
+    }
+  }
+  &_1 {
+    &::before {
+      min-width: 52px; height: 52px;
+      background: $spriteUrl -83px -10px;
+    }
+  }
+  &_2 {
+    &::before {
+      min-width: 32px; height: 52px;
+      background: $spriteUrl -222px -10px;
+      margin-left: auto;
+    }
+  }
+  &_3 {
+    &::before {
+      min-width: 47px; height: 54px;
+      background: $spriteUrl -155px -10px;
+    }
+  }
+  &_4 {
+    &::before {
+      min-width: 53px; height: 52px;
+      background: $spriteUrl -10px -10px;
+    } 
+  }
+  &_5 {
+    &::before {
+      min-width: 52px; height: 33px;
+      background: $spriteUrl -82px -82px;
+    } 
+  }
+}

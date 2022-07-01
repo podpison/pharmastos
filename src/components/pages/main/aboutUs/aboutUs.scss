@@ -11,9 +11,7 @@
     gap: 15px;
   }
   &__companyName {
-    @include v.h3;
     color: white;
-    line-height: 120%;
     position: relative;
     &::before {
       content: '';
@@ -30,7 +28,6 @@
   }
   &__companyDescription {
     color: white;
-    line-height: 140%;
   }
   &__items {
     display: grid;
@@ -40,7 +37,7 @@
   }
   &__item {
     background-color: white;
-    padding: 30px 25px;
+    padding: 30px 16px 30px 24px;
     box-shadow: 2px 2px 19px rgb(0 0 0 / 6%);
     border-radius: 2px;
   }

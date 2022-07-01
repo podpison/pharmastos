@@ -9,6 +9,6 @@ type Props = {
 export const Item: React.FC<Props> = ({ type, text }) => {
   return <div className={`aboutUs__item aboutUs__item_type_${type}`}>
     <div className="aboutUs__itemImg" />
-    <p className="aboutUs__itemDesciption">{text}</p>
+    <p className="text aboutUs__itemDesciption">{text}</p>
   </div>
 };

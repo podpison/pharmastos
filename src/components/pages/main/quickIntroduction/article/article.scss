@@ -2,7 +2,6 @@
 
 .quickIntroduction {
   &__articleHeading {
-    @include v.h1;
     font-weight: 700;
     color: white;
     margin-bottom: 0.42em;

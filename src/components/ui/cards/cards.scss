@@ -1,6 +1,6 @@
-@use "./../../../../v";
+@use "./../../../v";
 
-.popularItems {
+.cards {
   margin-top: 80px;
   &__headingContainer {
     display: flex;
@@ -8,10 +8,10 @@
     align-items: center;
     margin-bottom: 40px;
   }
-  &__heading {
-    @include v.h3;
-  }
-  &__allProductsLink {
+  // &__heading {
+
+  // }
+  &__link {
     color: v.$green;
     &:hover span {
       text-decoration: underline;
@@ -23,7 +23,6 @@
     }
     span {
       color: v.$green;
-      font-weight: 500;
     }
   }
   &__items {
@@ -31,49 +30,47 @@
     grid-template-columns: repeat(4, 1fr);
     gap: 30px;
   }
-  &__item {
+  &__card {
     border-radius: 2px;
     box-shadow: 2px 2px 19px rgba(0, 0, 0, 0.06);
     background-color: white;
     padding: 1em;
     cursor: pointer;
     &:hover {
-      .popularItems__itemButton {
+      .card__button {
         background-color: white;
         color: v.$green;
       }
     }
+    // &__img {
+    
+    // }
+    // &__content {
+    
+    // }
   }
-  // &__itemImg {
-
-  // }
-  // &__itemContent {
-
-  // }
-  &__itemName {
+  &__cardName {
     text-transform: uppercase;
-    font-weight: 500;
     margin: 10px auto;
-    line-height: 150%;
+    font-weight: 500;
   }
-  &__itemDescription {
+  &__cardDescription {
     font-size: 12px;
     line-height: 150%;
   }
-  &__itemPriceContainer {
+  &__cardPriceContainer {
     display: flex;
     gap: 10px;
     align-items: baseline;
     margin: 15px 0;
   }
-  &__itemPrice {
-    @include v.h5;
-  }
-  &__itemPriceClarification {
+  // &__price {
+  
+  // }
+  &__cardPriceClarification {
     color: v.$grayBright;
-    font-size: 12px;
   }
-  &__itemButton {
+  &__cardButton {
     padding-left: 0;
     padding-right: 0;
     width: 100%;

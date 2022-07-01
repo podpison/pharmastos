@@ -1,16 +1,9 @@
 @use "./../../../../v";
 
 .quickIntroduction {
-  @include v.linearBackground('./../../../../assets/images/bc/quickIntroductionBC.jpg');
+  @include v.linearBackground();
   display: grid;
   grid-template-columns: 50% 414px;
   align-items: center;
   justify-content: space-between;
-  &__backgroundImage {
-    position: absolute;
-    left: calc(50% - 50vw);
-    width: 100vw;
-    height: 100%;
-    z-index: -2;
-  }
 }

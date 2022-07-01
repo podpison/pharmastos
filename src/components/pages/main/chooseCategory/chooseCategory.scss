@@ -2,7 +2,6 @@
 
 .chooseCategory {
   &__heading {
-    @include v.h3;
     margin: 2.5em 0 1.25em;
   }
   &__categories {
@@ -40,9 +39,7 @@
     z-index: 1;
   }
   &__categoryName {
-    @include v.h4;
     color: white;
-    line-height: 140%;
     span {
       color: white;
     }

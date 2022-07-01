@@ -7,7 +7,7 @@ type Props = {
 }
 
 export const PageLink: React.FC<Props> = ({ name, to }) => {
-  return <li className="nav__page-link">
+  return <li className="text nav__page-link">
     <NavLink to={to}>{name}</NavLink>
   </li>
 };

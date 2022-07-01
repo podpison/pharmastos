@@ -1,0 +1,52 @@
+@use "./../../../../v";
+
+.subscribeForm {
+  @include v.linearBackground;
+  padding: 80px 0;
+  &__heading {
+    color: white;
+    width: 60%;
+    margin-bottom: 30px;
+  }
+  &__description {
+    margin-bottom: 30px;
+    width: 58%;
+  }
+  &__form {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+  }
+  &__submitForm {
+    padding: 0;
+  }
+  &__textFieldContainer {
+    position: relative;
+    &.subscribeForm__textFieldContainer_error {
+      .subscribeForm__textField {
+        color: #de5754;
+        &::placeholder {
+          color: #de5754;
+        }
+      }
+    }
+  }
+  &__textField {
+    padding: 12px 20px;
+    width: 100%;
+    border-radius: 2px;
+    border: none;
+    background-color: v.$white;
+    font-size: 16px;
+    &:focus {
+      outline: none;
+    }
+    &:-webkit-autofill,
+    &:-webkit-autofill:hover,
+    &:-webkit-autofill:focus {
+      -webkit-box-shadow: 0 0 0px 1000px v.$white inset !important;
+      box-shadow: 0 0 0px 1000px v.$white inset !important;
+      -webkit-text-fill-color: v.$grayBright!important;
+    }
+  }
+}

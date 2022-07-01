@@ -15,47 +15,10 @@ $white: #F7F7F8;
   }
 }
 
-@mixin typography($fontWeight: null, $fontSize: null, $uppercase: true) {
-  line-height: 140%;
-  @if ($fontWeight != null) {
-    font-weight: $fontWeight;
-  } @else {
-    font-weight: 600;
-  }
-  @if ($fontSize != null) {
-    font-size: $fontSize;
-  }
-  @if ($uppercase) {
-    text-transform: uppercase;
-  }
-}
-@mixin h1 {
-  @include typography(500, 48px);
-}
-@mixin h2 {
-  @include typography(null, 40px);
-}
-@mixin h3 {
-  @include typography(500, 32px);
-}
-@mixin h4 {
-  @include typography(600, 24px);
-}
-@mixin h5 {
-  @include typography(600, 20px);
-}
-@mixin smallText {
-  @include typography(null, 12px, false);
-}
-
 @mixin linearBackground($img: null) {
   position: relative;
   &::before {
-    @if ($img != null) {
-      background: linear-gradient(232.8deg, #165EBF -13.5%, #29B384 76%);
-    } @else {
-      background: linear-gradient(232.8deg, #165EBF -13.5%, #29B384 76%);
-    }
+    background: linear-gradient(232.8deg, #165EBF -13.5%, #29B384 76%);
     opacity: .7;
     content: '';
     width: 100vw;
@@ -63,6 +26,14 @@ $white: #F7F7F8;
     height: 100%;
     position: absolute;
     z-index: -1;
+    top: 0;
+  }
+  &__backgroundImage {
+    position: absolute;
+    left: calc(50% - 50vw);
+    width: 100vw;
+    height: 100%;
+    z-index: -2;
     top: 0;
   }
 }
