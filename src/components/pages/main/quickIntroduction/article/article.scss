@@ -1,11 +1,19 @@
 @use "./../../../../../v";
 
 .quickIntroduction {
+  &__article {
+    @media screen and (max-width: 1040px) {
+      margin-bottom: 3em;
+      margin-right: auto;
+    }
+  }
   &__articleHeading {
     font-weight: 700;
     color: white;
-    margin-bottom: 0.42em;
-    position: relative;
+    @media screen and (min-width: 1041px) {
+      margin-bottom: 0.42em;
+      position: relative;
+    }
     &::before {
       content: '';
       width: 180px;
@@ -15,10 +23,21 @@
       position: absolute;
       top: -85px;
       z-index: -1;
+      background-size: 100%;        
+      @media screen and (max-width: 1040px) {
+        top: 5px;
+        width: 100px;
+        height: 100px;
+        background-repeat: no-repeat;
+        right: 5px;
+      }
     }
   }
   &__articleTexts {
     width: 95%;
+    @media screen and (max-width: 1040px) {
+      max-width: 40em;
+    }
   }
   &__articleText {
     color: white;
@@ -33,6 +52,9 @@
     background-color: white;
     border-color: transparent;
     margin-top: 1.875em;
+    @media screen and (max-width: 1040px) {
+      margin-top: 1.5em;
+    }
     &:hover:enabled {
       color: white;
       background-color: v.$green;

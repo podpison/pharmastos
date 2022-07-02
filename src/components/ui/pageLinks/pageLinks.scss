@@ -1,0 +1,11 @@
+.page-links {
+  &__box {
+    display: flex;
+  }
+  // &__page-links {
+
+  // }
+  &__page-link {
+    cursor: pointer;
+  }
+}

@@ -3,7 +3,12 @@
 .quickIntroduction {
   @include v.linearBackground();
   display: grid;
-  grid-template-columns: 50% 414px;
+  grid-template-columns: 585px 414px;
   align-items: center;
   justify-content: space-between;
+  @media screen and (max-width: 1040px) {
+    display: flex;
+    flex-direction: column;
+    padding: 20px 0;
+  }
 }

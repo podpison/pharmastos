@@ -1,9 +1,14 @@
 import phoneImg from "./../../../../assets/images/phone.png";
 import "./phone.scss";
+import cn from "classNames";
 
-export const Phone: React.FC = () => {
-  return <div className="phone">
+type Props = {
+  className?: string
+}
+
+export const Phone: React.FC<Props> = ({ className }) => {
+  return <a href='tel: (067) 570-34-89' className={cn("phone", className)}>
     <img className="phone__img" src={phoneImg} alt='phone' />
-    <a className="text phone__number" href='tel: (067) 570 34 89'>(067) 570 34 89</a>
-  </div>
+    <p className="text phone__number">(067) 570-34-89</p>
+  </a>
 };

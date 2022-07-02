@@ -20,7 +20,7 @@ type Props = {
 }
 
 export const Cards: React.FC<Props> = ({ heading, link, items }) => {
-  let Items = items.map((i, index) => <Card {...i} key={index} />)
+  let Items = items.slice(0, 4).map((i, index) => <Card {...i} key={index} />)
 
   return <div className='cards'>
     <div className='cards__headingContainer'>

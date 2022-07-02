@@ -69,25 +69,40 @@ h1 {
 	font-weight: 500;
 	font-size: 48px;
 	line-height: 120%;
+	@media screen and (max-width: 1040px) {
+		font-size: 40px;
+	}
 }
 h2 {
 	font-size: 40px;
 	line-height: 120%;
+	@media screen and (max-width: 1040px) {
+		font-style: 36px;
+	}
 }
 h3 {
 	font-weight: 500;
 	font-size: 32px;
 	line-height: 120%;
+	@media screen and (max-width: 1040px) {
+		font-style: 28px;
+	}
 }
 h4 {
 	line-height: 140%;
 	font-size: 24px;
 	font-weight: 600;
+	@media screen and (max-width: 1040px) {
+		font-style: 20px;
+	}
 }
 h5 {
 	font-weight: 600;
 	font-size: 20px;
 	line-height: 140%;
+	@media screen and (max-width: 1040px) {
+		font-style: 18px;
+	}
 }
 .text {
 	line-height: 150%;

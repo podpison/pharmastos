@@ -5,23 +5,28 @@ $black: #082242;
 $gray: #40474F;
 $grayBright: #ACB7C5;
 $white: #F7F7F8;
+$background: #E5E5E5;
 
 @mixin container {
   max-width: 1190px;
   margin: auto;
   padding: 0 10px;
-  @media screen and (max-width: 1200px) {
+  @media screen and (max-width: 1280px) {
     max-width: 1024px;
+  }
+  @media screen and (max-width: 1040px) {
+    padding: 0 15px;
   }
 }
 
-@mixin linearBackground($img: null) {
+@mixin linearBackground() {
   position: relative;
   &::before {
     background: linear-gradient(232.8deg, #165EBF -13.5%, #29B384 76%);
     opacity: .7;
     content: '';
     width: 100vw;
+    left: 0;
     margin-left: calc(50% - 50vw);
     height: 100%;
     position: absolute;
@@ -35,5 +40,33 @@ $white: #F7F7F8;
     height: 100%;
     z-index: -2;
     top: 0;
+    object-fit: cover;
+  }
+}
+
+$breakpoints: (
+  sm: 640px,
+  md: 768px,
+  lg: 1024px,
+  xl: 1280px
+);
+@mixin sm-u {
+  @media (min-width: map-get($breakpoints, sm)) {
+    @content;
+  }
+}
+@mixin md-u {
+  @media (min-width: map-get($breakpoints, md)) {
+    @content;
+  }
+}
+@mixin lg-u {
+  @media (min-width: map-get($breakpoints, lg)) {
+    @content;
+  }
+}
+@mixin xl {
+  @media (min-width: map-get($breakpoints, xl)) {
+    @content;
   }
 }

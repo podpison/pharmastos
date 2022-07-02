@@ -1,13 +1,14 @@
 @use "./v";
 
-body {
+html, body {
   overflow-x: hidden;
-  background-color: #E5E5E5;
+}
+body {
+  background-color: v.$background;
 }
 
 #root {
   @include v.container;
-  margin-bottom: 200px;
 }
 
 //advantages

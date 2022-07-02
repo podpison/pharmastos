@@ -2,6 +2,20 @@
   &__representatives {
     display: grid;
     grid-template-rows: repeat(3, 1fr);
+    @media screen and (max-width: 1040px) {
+      display: flex;
+      width: 100%;
+    }
+    @media screen and (max-width: 768px) {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      row-gap: 5px;
+    }
+    @media screen and (max-width: 500px) {
+      grid-template-rows: auto;
+      grid-template-columns: 1fr;
+    }
   }
   &__representative {
     display: flex;
@@ -14,6 +28,12 @@
     transition: background-color .25s;
     &:hover {
       background-color: rgba(255, 255, 255, 0.5);
-    }  
+    }
+    @media screen and (max-width: 1040px) {
+      height: 150px;
+    }
+    @media screen and (max-width: 768px) and (min-width: 501px) {
+      margin: auto;
+    }
   }
 }
