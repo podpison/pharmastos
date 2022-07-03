@@ -1,24 +1,33 @@
-$spritePath: url(./../../../../assets/images/sprites/chooseCategory_sprite.png);
+@mixin defaultSettings {
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
 
 .chooseCategory__category {
   width: 100%;
   height: 240px;
   &_type_0 {
-    background: $spritePath -410px -530px;
+    background-image: url(./../../../../assets/images/pages/mainPage/chooseCategory/nitrileGloves.jpg);
+    @include defaultSettings;
   }
   &_type_1 {
-    background: $spritePath -10px -10px;
+    background: url(./../../../../assets/images/pages/mainPage/chooseCategory/medicalGloves.jpg);
+    @include defaultSettings;
   }
   &_type_2 {
-    background: $spritePath -410px -10px;
+    background: url(./../../../../assets/images/pages/mainPage/chooseCategory/examinationGloves.jpg);
+    @include defaultSettings;
   }
   &_type_3 {
-    background: $spritePath -10px -270px;
+    background: url(./../../../../assets/images/pages/mainPage/chooseCategory/foodIndustry.jpg);
+    @include defaultSettings;
   }
   &_type_4 {
-    background: $spritePath -410px -270px;
+    background: url(./../../../../assets/images/pages/mainPage/chooseCategory/householdGloves.jpg);
+    @include defaultSettings;
   }
   &_type_5 {
-    background: $spritePath -10px -530px;
+    background: url(./../../../../assets/images/pages/mainPage/chooseCategory/repairAndConstruction.jpg);
+    @include defaultSettings;
   }
 }

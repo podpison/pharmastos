@@ -37,5 +37,5 @@ const news = [
 ]
 
 export const News: React.FC = () => {
-  return <Cards heading="Новости" items={news} link={{link: 'Все новости', path: '/news'}} />
+  return <Cards disabledImgPaddings heading="Новости" items={news} link={{link: 'Все новости', path: '/news'}} />
 };

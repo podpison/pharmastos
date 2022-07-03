@@ -17,10 +17,11 @@ type Props = {
     path: string
   }
   items: CardType[]
+  disabledImgPaddings?: boolean
 }
 
-export const Cards: React.FC<Props> = ({ heading, link, items }) => {
-  let Items = items.slice(0, 4).map((i, index) => <Card {...i} key={index} />)
+export const Cards: React.FC<Props> = ({ heading, link, items, disabledImgPaddings = false }) => {
+  let Items = items.slice(0, 4).map((i, index) => <Card {...i} disabledImgPaddings={disabledImgPaddings} key={index} />)
 
   return <div className='cards'>
     <div className='cards__headingContainer'>

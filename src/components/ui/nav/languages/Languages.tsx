@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Language } from "./Language";
 import "./languages.scss";
-import cn from "classNames";
+import cn from "classnames";
 
 type Props = {
   className: string

@@ -11,6 +11,9 @@
     @media screen and (max-width: 1040px) {
       grid-template-columns: 1fr 1fr;
     }
+    @media screen and (max-width: 640px) {
+      grid-template-columns: 1fr;
+    }
   }
   &__category {
     position: relative;

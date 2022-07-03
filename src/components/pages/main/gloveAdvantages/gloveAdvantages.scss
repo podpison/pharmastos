@@ -4,14 +4,22 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 30px;
+  @media screen and (max-width: 1280px) {
+    grid-template-columns: 1fr;
+  }
   // &__content {
 
   // }
   &__headingContainer {
     margin-bottom: 40px;
+    @media screen and (max-width: 1280px) {
+      margin-bottom: 30px;
+    }
   }
   &__heading {
-    margin-bottom: 10px;
+    @media screen and (min-width: 1281px) {
+      margin-bottom: 10px;
+    }
   }
   &__headingClarification {
     color: v.$grayBright;
@@ -23,11 +31,15 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 33px;
+    @media screen and (max-width: 768px) {
+      grid-template-columns: 1fr;
+    }
   }
   &__advantage {
     grid-template-columns: 50px 1fr;
     display: grid;
     gap: 20px;
+    align-items: center;
     &::before {
       content: '';
       display: block;
@@ -37,24 +49,39 @@
   &__examples {
     display: grid;
     gap: 10px;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
+    @media screen and (min-width: 501px) {
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+    }
   }
   &__example {
     height: 100%;
     width: 100%;
     border-radius: 2px;
+    object-fit: cover;
     &:nth-child(1) {
-      grid-row: 1;
-      grid-column: 1;
+      @media screen and (min-width: 501px) {
+        grid-row: 1;
+        grid-column: 1;
+      }
+      max-height: 200px
     }
     &:nth-child(2) {
       grid-row: 1 / 3;
       grid-column: 2;
+      max-height: 400px;
+      @media screen and (max-width: 500px) {
+        max-height: 200px;
+        grid-column: initial;
+        grid-row: initial;
+      }
     }
     &:nth-child(3) {
-      grid-column: 1;
-      grid-row: 2;
+      @media screen and (min-width: 501px) {
+        grid-column: 1;
+        grid-row: 2;
+      }
+      max-height: 200px;
     }
   }
 }

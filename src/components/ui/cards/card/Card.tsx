@@ -1,10 +1,16 @@
 import { Link } from "react-router-dom"
+import { classNameHelper } from "../../../../helpers/classNameHelper";
 import { Button } from "../../button/Button"
 import { CardType } from "../Cards";
 import "./card.scss";
 
-export const Card: React.FC<CardType> = ({ to, img, name, description, price }) => {
-  return <Link to={to} className='card'>
+type Props = {
+  disabledImgPaddings: boolean
+} & CardType
+
+export const Card: React.FC<Props> = ({ to, img, name, description, price, disabledImgPaddings }) => {
+  
+  return <Link to={to} className={classNameHelper('card', {disabledImgPaddings})}>
     <img className='card__img' alt='card' src={img} />
     <div className='card__content'>
       <p className='text card__name'>{name}</p>

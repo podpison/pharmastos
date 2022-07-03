@@ -16,7 +16,7 @@ export const GloveAdvantages: React.FC = () => {
         <p className='text gloveAdvantages__advantage gloveAdvantages__advantage_type_3'>Высокий уровень безопасности</p>
         <p className='text gloveAdvantages__advantage gloveAdvantages__advantage_type_1'>Высокая прочность, стойкость к порезам и разрывам</p>
         <p className='text gloveAdvantages__advantage gloveAdvantages__advantage_type_4'>Обеспечивают необходимую чувствительность рук</p>
-        <p className='text gloveAdvantages__advantage gloveAdvantages__advantage_type_2'>Хорошая <br />эластичность</p>
+        <p className='text gloveAdvantages__advantage gloveAdvantages__advantage_type_2'>Хорошая эластичность</p>
         <p className='text gloveAdvantages__advantage gloveAdvantages__advantage_type_5'>Экстурированная поверхность создает надежную фиксацию инструмента</p>
       </div>
     </div>

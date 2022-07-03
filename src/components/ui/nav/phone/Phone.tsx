@@ -1,6 +1,6 @@
 import phoneImg from "./../../../../assets/images/phone.png";
 import "./phone.scss";
-import cn from "classNames";
+import cn from "classnames";
 
 type Props = {
   className?: string
