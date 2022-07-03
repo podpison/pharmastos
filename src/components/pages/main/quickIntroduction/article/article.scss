@@ -10,9 +10,11 @@
   &__articleHeading {
     font-weight: 700;
     color: white;
-    @media screen and (min-width: 1041px) {
-      margin-bottom: 0.42em;
-      position: relative;
+    margin-bottom: 0.42em;
+    position: relative;
+    @media screen and (max-width: 1040px) {
+      position: initial;
+      margin-bottom: 7px;
     }
     &::before {
       content: '';

@@ -1,7 +1,8 @@
 @use "./../../../../v";
 
 .quickIntroduction {
-  @include v.linearBackground();
+  @include v.linearBackground;
+  @include v.componentPaddings(true);
   display: grid;
   grid-template-columns: 585px 414px;
   align-items: center;
@@ -9,6 +10,5 @@
   @media screen and (max-width: 1040px) {
     display: flex;
     flex-direction: column;
-    padding: 20px 0;
   }
 }

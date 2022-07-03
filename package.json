@@ -8,9 +8,6 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@emotion/react": "^11.9.3",
-    "@emotion/styled": "^11.9.3",
-    "@mui/material": "^5.8.5",
     "@reduxjs/toolkit": "^1.8.2",
     "classnames": "^2.3.1",
     "formik": "^2.2.9",

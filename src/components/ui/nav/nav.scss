@@ -4,7 +4,9 @@
   width: 100vw;
   margin-left: calc(50% - 50vw);
   background-color: white;
-  padding: 1.75em 0;
+  @media screen and (max-width: 1040px) {
+    padding: 22px 0;
+  }
   &__box {
     @include v.container;
     display: flex;
@@ -23,7 +25,7 @@
       display: none;
     }
     & > ul > li {
-      margin: 0 .625em;
+      padding: 1.75em .625em;
       transition: background-color .25s;
       &:hover {
         background-color: v.$green;
@@ -59,7 +61,7 @@
       }
     }
   }
-  &__burgerIcon {
+  &__burger-icon {
     width: 30px;
     margin-left: max(1.7%, 15px);
     cursor: pointer;
@@ -67,43 +69,4 @@
       display: none;
     }
   }
-  &__burgerMenu {
-    width: 100vw;
-    height: 100vh;
-    z-index: 10;
-    position: fixed;
-    inset: 0 auto auto 0;
-    background-color: rgba(0, 0, 0, 0.623);
-    &.nav__burgerMenu_disabled {
-      display: none;
-    }
-  }
-  &__burgerMenuBox {
-    background-color: white;
-    padding: 20px;
-  }
-  &__closeBurger {
-    cursor: pointer;
-    position: absolute;
-    inset: 15px 20px auto auto;
-    width: 30px;
-  }
-  &__burgerPageLinks {
-    & > ul {
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-      & > li {
-        width: fit-content;
-      }
-    }
-  }
-  &__burgerPhoneAndLng {
-    display: flex;
-    margin-bottom: 15px;
-    gap: 20px;
-  }
-  // &__burgerLngs {
-  //   margin-left: 0;
-  // }
 }

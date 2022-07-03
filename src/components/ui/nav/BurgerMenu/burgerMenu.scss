@@ -1,0 +1,39 @@
+.burger-menu {
+  width: 100vw;
+  height: 100vh;
+  z-index: 10;
+  position: fixed;
+  inset: 0 auto auto 0;
+  background-color: rgba(0, 0, 0, 0.623);
+  &.burger-menu_disabled {
+    display: none;
+  }
+  &__box {
+    background-color: white;
+    padding: 20px;
+  }
+  &__close-menu {
+    cursor: pointer;
+    position: absolute;
+    inset: 15px 20px auto auto;
+    width: 30px;
+  }
+  &__burger-page-links {
+    & > ul {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      & > li {
+        width: fit-content;
+      }
+    }
+  }
+  &__burger-phone-and-lng {
+    display: flex;
+    margin-bottom: 15px;
+    gap: 20px;
+  }
+  // &__burger-lngs {
+  //   margin-left: 0;
+  // }
+}

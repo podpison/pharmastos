@@ -43,6 +43,38 @@ $background: #E5E5E5;
     object-fit: cover;
   }
 }
+@mixin greenHover {
+  transition: .25s;
+  &:hover {
+    color: $green;
+  }
+}
+@mixin distanceBetween2Components($reverse: false) {
+  $distance: max(6.85%, 50px);
+  @if ($reverse) {
+    margin-top: $distance;
+  } @else {
+    margin-bottom: $distance;
+  }
+}
+@mixin defaultGap {
+  gap: 30px;
+  @media screen and (max-width: 1040px) {
+    gap: 20px;
+  }
+  @media screen and (max-width: 640px) {
+    gap: 15px;
+  }
+}
+@mixin componentPaddings($mobileOnly: false) {
+  @if ($mobileOnly) {
+    @media screen and (max-width: 1040px) {
+      padding: max(6.85%, 20px) 0;
+    }
+  } @else {
+    padding: max(6.85%, 20px) 0;
+  }
+}
 
 $breakpoints: (
   sm: 640px,
@@ -50,23 +82,3 @@ $breakpoints: (
   lg: 1024px,
   xl: 1280px
 );
-@mixin sm-u {
-  @media (min-width: map-get($breakpoints, sm)) {
-    @content;
-  }
-}
-@mixin md-u {
-  @media (min-width: map-get($breakpoints, md)) {
-    @content;
-  }
-}
-@mixin lg-u {
-  @media (min-width: map-get($breakpoints, lg)) {
-    @content;
-  }
-}
-@mixin xl {
-  @media (min-width: map-get($breakpoints, xl)) {
-    @content;
-  }
-}

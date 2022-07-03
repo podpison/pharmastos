@@ -9,6 +9,9 @@ body {
 
 #root {
   @include v.container;
+  & > section > div {
+    @include v.distanceBetween2Components;
+  }
 }
 
 //advantages

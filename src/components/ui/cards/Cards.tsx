@@ -1,6 +1,6 @@
 import "./cards.scss";
 import { Link } from "react-router-dom";
-import { Card } from "./Card";
+import { Card } from "./card/Card";
 
 export type CardType = {
   to: string
