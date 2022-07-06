@@ -104,24 +104,26 @@ h5 {
 		font-size: 18px;
 	}
 }
-.text {
-	line-height: 150%;
-	&_white {
-		color: white;
-	}
-	&_grayBright {
-		color: v.$grayBright;
+
+@mixin textColors {
+	&_color {
+		&_white {
+			color: white;
+		}
+		&_grayBright {
+			color: v.$grayBright;
+		}
 	}
 }
+
+.text {
+	@include textColors;
+	line-height: 150%;
+}
 .text2 {
+	@include textColors;
 	line-height: 150%;
 	font-size: 12px;
-	&_white {
-		color: white;
-	}
-	&_grayBright {
-		color: v.$grayBright;
-	}
 }
 
 @font-face {

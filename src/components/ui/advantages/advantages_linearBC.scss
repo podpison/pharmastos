@@ -1,0 +1,9 @@
+@use "./../../../v";
+
+.advantages.advantages_linearBC {
+  @include v.linearBackground;
+  @include v.componentPaddings;
+  .advantages__name, .advantages__description {
+    color: white;
+  }
+}

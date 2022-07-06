@@ -17,7 +17,7 @@ export const BurgerMenu: React.FC<Props> = ({ onClose, open }) => {
   };
 
   return <>
-    <div onClick={onBurgerMunuClick} className={cn('burger-menu', !open && 'burger-menu_disabled')}>
+    <div onClick={onBurgerMunuClick} className={cn('burger-menu', open && 'burger-menu_opend')}>
       <div className='burger-menu__box'>
         <img className="burger-menu__close-menu" alt='close menu' src={closeImg} onClick={() => onClose()} /> {/* Close icon by Icons8 */}
         <div className="burger-menu__burger-phone-and-lng">

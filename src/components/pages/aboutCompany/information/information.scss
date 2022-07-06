@@ -1,0 +1,30 @@
+@use "./../../../../v";
+
+.information {
+  @include v.defaultGap;
+  margin-top: 60px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    p {
+      color: v.$gray;
+    }
+  }
+  &__heading {
+    margin-bottom: 20px;
+  }
+  &__gloves {
+    position: relative;
+  }
+  &__glovesBackground {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: v.$linear;
+    inset: -20px -20px auto auto;
+    z-index: -1;
+  }
+}

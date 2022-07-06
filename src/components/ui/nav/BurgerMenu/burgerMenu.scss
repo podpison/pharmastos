@@ -1,3 +1,12 @@
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
 .burger-menu {
   width: 100vw;
   height: 100vh;
@@ -5,8 +14,13 @@
   position: fixed;
   inset: 0 auto auto 0;
   background-color: rgba(0, 0, 0, 0.623);
-  &.burger-menu_disabled {
-    display: none;
+  opacity: 1;
+  visibility: visible;
+  &.burger-menu_opend {
+    animation: fadeOut 2s;
+    transition-duration: 2s;
+    opacity: 0;
+    visibility: hidden;
   }
   &__box {
     background-color: white;

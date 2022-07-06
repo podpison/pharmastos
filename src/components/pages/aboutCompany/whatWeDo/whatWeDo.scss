@@ -1,0 +1,12 @@
+@use "./../../../../v";
+
+.whatWeDo {
+  @include v.linearBackground;
+  @include v.componentPaddings;
+  @include v.defaultGap;
+  display: flex;
+  &__heading {
+    color: white;
+    margin-bottom: 20px;
+  }
+}

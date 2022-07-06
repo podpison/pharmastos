@@ -23,7 +23,7 @@ export const SubscribeForm: React.FC = () => {
   return <div className='subscribeForm'>
     <img className='subscribeForm__backgroundImage' src={backgroundImg} alt='background' />
     <h3 className='subscribeForm__heading'>Следите за всеми акциями и выгодными предложениями легко</h3>
-    <p className="subscribeForm__description text text_white">Отправьте нам свой электронный адрес и получайте все новости относительно выгодных предложений и акций нашей компании. Не упускайте шанс обеспечить свою защиту за лучшую цену!</p>
+    <p className="subscribeForm__description text text_color_white">Отправьте нам свой электронный адрес и получайте все новости относительно выгодных предложений и акций нашей компании. Не упускайте шанс обеспечить свою защиту за лучшую цену!</p>
     <Formik initialValues={initialValues} validationSchema={validationSchema}
       onSubmit={(values, { resetForm }) => {
         console.log(values)

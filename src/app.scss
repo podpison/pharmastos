@@ -13,24 +13,6 @@ body {
     @include v.distanceBetween2Components;
   }
 }
-
-//advantages
-.bg-storage {
-  width: 50px; height: 45px;
-  background: url('css_sprites.png') -10px -10px;
-}
-.bg-oneCurrency {
-  width: 32px; height: 50px;
-  background: url('css_sprites.png') -65px -75px;
-}
-.bg-region {
-  width: 50px; height: 36px;
-  background: url('css_sprites.png') -80px -10px;
-}
-.bg-medal {
-  width: 35px; height: 50px;
-  background: url('css_sprites.png') -10px -75px;
-}
 //payment and delivery
 .bg-card {
   width: 50px; height: 40px;

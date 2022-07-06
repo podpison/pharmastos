@@ -19,10 +19,10 @@ $background: #E5E5E5;
   }
 }
 
-@mixin linearBackground() {
+@mixin linearBackground {
   position: relative;
   &::before {
-    background: linear-gradient(232.8deg, #165EBF -13.5%, #29B384 76%);
+    background: $linear;
     opacity: .7;
     content: '';
     width: 100vw;
