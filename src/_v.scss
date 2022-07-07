@@ -49,13 +49,8 @@ $background: #E5E5E5;
     color: $green;
   }
 }
-@mixin distanceBetween2Components($reverse: false) {
-  $distance: max(6.85%, 50px);
-  @if ($reverse) {
-    margin-top: $distance;
-  } @else {
-    margin-bottom: $distance;
-  }
+@mixin distanceBetween2Components {
+  margin-bottom: max(6.85%, 50px);
 }
 @mixin defaultGap {
   gap: 30px;

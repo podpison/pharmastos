@@ -1,8 +1,8 @@
 import "./gloveAdvantages.scss";
 import "./gloveAdvantage_type.scss";
-import example1Img from "./../../../../assets/images/pages/mainPage/gloveAdvantagesExample1.jpg";
-import example2Img from "./../../../../assets/images/pages/mainPage/gloveAdvantagesExample3.jpg";
-import example3Img from "./../../../../assets/images/pages/mainPage/gloveAdvantagesExample2.jpg";
+import example1Img from "./../../../../assets/images/pages/mainPage/gloveAdvantagesExample1.png";
+import example2Img from "./../../../../assets/images/pages/mainPage/gloveAdvantagesExample3.png";
+import example3Img from "./../../../../assets/images/pages/mainPage/gloveAdvantagesExample2.png";
 
 export const GloveAdvantages: React.FC = () => {
   return <div className="gloveAdvantages">

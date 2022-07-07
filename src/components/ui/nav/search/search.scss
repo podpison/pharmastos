@@ -6,4 +6,7 @@
   @media screen and (max-width: 640px) {
     margin-left: auto;
   }
+  & > img {
+    width: 23px;
+  }
 }

@@ -4,9 +4,20 @@
   @include v.linearBackground;
   @include v.componentPaddings;
   @include v.defaultGap;
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  @media screen and (max-width: 1040px) {
+    grid-template-columns: 1fr;
+  }
   &__heading {
     color: white;
     margin-bottom: 20px;
+  }
+  &__map {
+    max-width: 100%;
+    @media screen and (max-width: 1040px) {
+      grid-row: 2;
+    }
   }
 }

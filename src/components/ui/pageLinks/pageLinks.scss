@@ -7,5 +7,10 @@
   // }
   &__page-link {
     cursor: pointer;
+    &:first-child {
+      @media screen and (min-width: 1041px) {
+        display: none;
+      }
+    }
   }
 }

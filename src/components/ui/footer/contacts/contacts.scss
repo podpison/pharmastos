@@ -23,6 +23,7 @@
       &::before {
         content: '';
         background-image: url(./../../../../assets/images/phone.png);
+        background-size: contain;
         display: block;
         width: 18px;
         height: 18px;
@@ -38,7 +39,8 @@
     align-items: baseline;
     &::before {
       content: '';
-      background-image: url(./../../../../assets/images/mail.png);
+      background: url(./../../../../assets/images/mail.png) 100%;
+      background-size: contain;
       height: 15px;
       width: 24px;
       display: block;

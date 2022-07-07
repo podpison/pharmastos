@@ -1,7 +1,6 @@
 @use "./../../../v";
 
 .footer {
-  @include v.distanceBetween2Components(true);
   padding: 40px 0;
   background-color: white;
   width: 100vw;

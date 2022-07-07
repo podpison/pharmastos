@@ -12,6 +12,7 @@ import burgerImg from "./../../../assets/images/burger.png";
 
 export const Nav: React.FC = () => {
   const [isBurgerOpen, setIsBurgerOpen] = useState(false);
+  const changeBurgerStatus = () => setIsBurgerOpen(p => !p);
 
   return <nav className="nav">
     <div className="nav__box">
@@ -23,8 +24,8 @@ export const Nav: React.FC = () => {
       <Phone className="nav__phone" />
       <Search />
       <Basket />
-      <img onClick={() => setIsBurgerOpen(p => !p)} className='nav__burger-icon' src={burgerImg} alt='burger' /> {/* Menu icon by Icons8 */}
-      <BurgerMenu onClose={() => setIsBurgerOpen(false)} open={isBurgerOpen} />
+      <img onClick={changeBurgerStatus} className='nav__burger-icon' src={burgerImg} alt='burger' /> {/* Menu icon by Icons8 */}
+      <BurgerMenu closeBurger={changeBurgerStatus} onClose={changeBurgerStatus} open={isBurgerOpen} />
     </div>
   </nav>
 };

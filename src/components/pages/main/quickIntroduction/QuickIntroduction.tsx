@@ -1,7 +1,7 @@
 import { Article } from "./article/Article";
 import "./quickIntroduction.scss";
 import { Representatives } from "./representatives/Representatives";
-import bc from "./../../../../assets/images/bc/quickIntroductionBC.jpg";
+import bc from "./../../../../assets/images/bc/quickIntroductionBC.png";
 
 export const QuickIntroduction: React.FC = () => {
   return <div className="quickIntroduction">

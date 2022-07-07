@@ -1,9 +1,25 @@
-@keyframes fadeOut {
+@keyframes fadeIn {
   from {
-    opacity: 1;
+    position: absolute;
+    width: 100%;
+    top: -100%;
   }
   to {
-    opacity: 0;
+    position: absolute;
+    width: 100%;
+    top: 0;
+  }
+}
+@keyframes fadeOut {
+  from {
+    position: absolute;
+    width: 100%;
+    top: 0;
+  }
+  to {
+    position: absolute;
+    width: 100%;
+    top: -100%;
   }
 }
 
@@ -14,13 +30,23 @@
   position: fixed;
   inset: 0 auto auto 0;
   background-color: rgba(0, 0, 0, 0.623);
-  opacity: 1;
-  visibility: visible;
   &.burger-menu_opend {
-    animation: fadeOut 2s;
-    transition-duration: 2s;
+    visibility: visible;
+    opacity: 1;
+    transition-duration: .5s;
+    & > div {
+      animation: fadeIn .5s;
+      transition-duration: .5s;
+    }
+  }
+  &.burger-menu_closed {
     opacity: 0;
     visibility: hidden;
+    transition-duration: .5s;
+    & > div {
+      animation: fadeOut .5s;
+      transition-duration: .5s;
+    }
   }
   &__box {
     background-color: white;

@@ -2,16 +2,25 @@
 
 html, body {
   overflow-x: hidden;
+	height: 100%;
 }
 body {
   background-color: v.$background;
 }
-
 #root {
   @include v.container;
-  & > section > div {
-    @include v.distanceBetween2Components;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  & > section {
+    flex: 1 0 auto;
+    & > div {
+      @include v.distanceBetween2Components;
+    }
   }
+}
+footer {
+  flex: 0 0 auto;
 }
 //payment and delivery
 .bg-card {

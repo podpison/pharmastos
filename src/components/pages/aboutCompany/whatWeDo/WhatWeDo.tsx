@@ -3,7 +3,7 @@ import mapImg from "./../../../../assets/images/pages/aboutCompany/map.png";
 
 export const WhatWeDo: React.FC = () => {
   return <div className="whatWeDo">
-    <img alt='map' src={mapImg} />
+    <img className='whatWeDo__map' alt='map' src={mapImg} />
     <div>
       <h3 className="whatWeDo__heading">Что мы делаем</h3>
       <p className="text text_color_white">В настоящее время ООО «ТМН- ГРУПП УКРАИНА» представлено в 4 регионах Украины и продолжает расширение географии представительств.</p>

@@ -1,6 +1,7 @@
 @use "./../../../v";
 
 .cards {
+  @include v.distanceBetween2Components;
   &__headingContainer {
     display: flex;
     justify-content: space-between;

@@ -5,25 +5,25 @@ $sprite: url(./../../../../assets/images/sprites/aboutUs_sprite.png);
     &_0 {
       & > div {
         width: 36px; height: 50px;
-        background: $sprite -150px -10px;
+        background: $sprite -5px -111px;
       }
     }
     &_1 {
       & > div {
         width: 50px; height: 49px;
-        background: $sprite -80px -10px;
+        background: $sprite -5px -52px;
       }
     }
     &_2 {
       & > div {
         width: 50px; height: 50px;
-        background: $sprite -10px -10px;
+        background: $sprite -5px -171px;
       }
     }
     &_3 {
       & > div {
-        width: 50px; height: 50px;
-        background: $sprite -10px -80px;
+        width: 50px; height: 37px;
+        background: $sprite -5px -5px;
       }
     }
   }

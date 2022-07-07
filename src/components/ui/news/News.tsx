@@ -1,7 +1,4 @@
-import { Link } from "react-router-dom";
 import { Cards } from "../cards/Cards";
-// import { Card } from "../cards/Cards";
-import "./news.scss";
 
 const news = [
   {
