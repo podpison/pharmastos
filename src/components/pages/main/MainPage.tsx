@@ -1,4 +1,4 @@
-// import "./name.scss";
+import "./mainPage.scss";
 import { ChooseCategory } from "./chooseCategory/ChooseCategory";
 import { AboutUs } from "./aboutUs/AboutUs";
 import { QuickIntroduction } from "./quickIntroduction/QuickIntroduction";
@@ -41,7 +41,7 @@ export const MainPage: React.FC = () => {
   return <section>
     <QuickIntroduction />
     <ChooseCategory />
-    <Cards heading="Популярные" link={{link: 'Все продукты', path: '/somewhere'}} items={fakeProducts} />
+    <Cards className='mainPage__cards' heading="Популярные" link={{link: 'Все продукты', path: '/somewhere'}} items={fakeProducts} />
     <AboutUs />
     <GloveAdvantages />
     <SubscribeForm />

@@ -14,7 +14,7 @@ export const PageLinks: React.FC<Props> = ({ closeBurger, className }) => {
       <PageLink onClick={closeBurger} name="Наша продукция" to="/ourProducts" />
       <PageLink onClick={closeBurger} name="О компании" to="/aboutCompany" />
       <PageLink onClick={closeBurger} name="Блог" to="/blog" />
-      <PageLink onClick={closeBurger} name="Контакты" to="/Contacts" />
+      <PageLink onClick={closeBurger} name="Контакты" to="/contacts" />
     </ul>
   </nav>
 };

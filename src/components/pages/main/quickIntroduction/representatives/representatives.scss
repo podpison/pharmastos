@@ -26,6 +26,7 @@
     background-color: rgba(255, 255, 255, 0.8);
     border-radius: 2px;
     transition: background-color .25s;
+    backdrop-filter: blur(20px);
     &:hover {
       background-color: rgba(255, 255, 255, 0.5);
     }

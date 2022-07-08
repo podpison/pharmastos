@@ -1,0 +1,55 @@
+@use "./../../../v";
+
+@mixin icon($img, $width: 18, $height: 18) {
+  @include v.greenHover;
+  display: grid;
+  grid-template-columns: max-content 1fr;
+  gap: 8px;
+  &::before {
+    content: '';
+    background-image: url('./../../../assets/images/#{$img}.png');
+    background-size: contain;
+    display: block;
+    background-repeat: no-repeat;
+    width: $width + px;
+    height: $height + px;
+  }
+}
+.contacts {
+  display: flex;
+  flex-direction: column;
+  @media screen and (min-width: 769px) {
+    grid-row: 1 / 3;
+    grid-column: 2;
+  }
+  &__phones {
+    display: flex;
+    flex-direction: column;
+    @media screen and (max-width: 768px) {
+      width: fit-content;
+      margin-bottom: .5em;
+    }
+  }
+  &__phone {
+    @include v.greenHover;
+    display: grid;
+    grid-template-columns: calc(18px + 8px) 1fr;
+    & > span {
+      grid-column: 2;
+    }
+    &:first-child {
+      @include icon('phone');
+      &::before {
+        filter: invert(59%) sepia(65%) saturate(458%) hue-rotate(108deg) brightness(87%) contrast(88%);
+      }
+    }
+  }
+  &__geopoint {
+    @include icon('geopoint');
+  }
+  &__mail {
+    @include icon('mail', 24, 15);
+    align-items: baseline;
+    word-break: break-all;
+  }
+}

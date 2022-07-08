@@ -1,0 +1,14 @@
+@use "./../../../../v";
+
+.breadcrumbs {
+  display: flex;
+  gap: 8px;
+  margin: 20px 0;
+  &__item {
+    font-size: 12px;
+    cursor: pointer;
+  }
+  &__separator {
+    transform: rotateZ(270deg);
+  }
+}

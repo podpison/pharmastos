@@ -7,6 +7,7 @@
   grid-template-columns: 50% 50%;
   @media screen and (max-width: 1040px) {
     grid-template-columns: 1fr;
+    margin-top: 20px;
   }
   &__content {
     display: flex;

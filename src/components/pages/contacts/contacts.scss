@@ -1,0 +1,16 @@
+.contactsPage {
+  &__cards {
+    .card {
+      padding: 30px 20px 30px 24px;
+      &__description {
+        max-height: none;
+      }
+      &__heading {
+        margin-bottom: 16px;
+      }
+      .contacts {
+        gap: 10px
+      }
+    }
+  }
+}

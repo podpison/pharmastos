@@ -38,4 +38,11 @@
       }
     }
   }
+  &__contacts {
+    .contacts__phones {
+      align-items: flex-end;
+      margin-bottom: 1em;
+      gap: 5px;
+    }
+  }
 }
