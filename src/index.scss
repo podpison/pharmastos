@@ -62,7 +62,13 @@ button {
 	font-size: 16px;
 }
 
+@mixin headingColors {
+	&[data-color=white] {
+		color: v.$white;
+	}
+}
 h1, h2, h3, h4, h5 {
+	@include headingColors;
 	text-transform: uppercase;
 }
 h1 {
@@ -108,7 +114,7 @@ h5 {
 @mixin textColors {
 	&_color {
 		&_white {
-			color: white;
+			color: v.$white;
 		}
 		&_grayBright {
 			color: v.$grayBright;

@@ -15,7 +15,7 @@ export const Category: React.FC<Props> = ({ name, to, type }) => {
   
   return <Link className={`chooseCategory__category chooseCategory__category_type_${type}`} to={`/categories/${to}`}>
     <div className="chooseCategory__categoryContent">
-      <h4 className="chooseCategory__categoryName">
+      <h4 data-color='white' className="chooseCategory__categoryName">
         {otherWords}
         <br />
         <span> {lastWord}<img className="chooseCategory__arrowRight" alt='arrow right' src={arrowLeftImg} /></span>

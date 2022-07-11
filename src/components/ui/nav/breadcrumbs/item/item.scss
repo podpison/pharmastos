@@ -1,0 +1,12 @@
+.breadcrumbs {
+  &__item {
+    font-size: 12px;
+    cursor: pointer;
+  }
+  &__separator {
+    transform: rotateZ(270deg);
+    &_color_white {
+      filter: grayscale(1) invert(1);
+    }
+  }
+}

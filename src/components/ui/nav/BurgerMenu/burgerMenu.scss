@@ -1,3 +1,5 @@
+@use "./../../../../v";
+
 @keyframes fadeIn {
   from {
     position: absolute;
@@ -49,7 +51,7 @@
     }
   }
   &__box {
-    background-color: white;
+    background-color: v.$white;
     padding: 20px;
   }
   &__close-menu {

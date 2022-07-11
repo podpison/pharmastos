@@ -2,7 +2,7 @@
 
 .information {
   @include v.defaultGap;
-  margin-top: max(5.13%, 30px);
+  margin-top: 20px;
   display: grid;
   grid-template-columns: 50% 50%;
   @media screen and (max-width: 1040px) {
@@ -41,5 +41,8 @@
     background: v.$linear;
     inset: -20px -20px auto auto;
     z-index: -1;
+  }
+  &__favicon {
+    
   }
 }

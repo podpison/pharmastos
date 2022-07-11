@@ -1,11 +1,13 @@
 @use "./../../../v";
 
 .nav {
-  width: 100vw;
-  margin-left: calc(50% - 50vw);
-  background-color: white;
-  @media screen and (max-width: 1040px) {
-    padding: 22px 0;
+  &__boxContainer {
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+    background-color: white;
+    @media screen and (max-width: 1040px) {
+      padding: 22px 0;
+    }
   }
   &__box {
     @include v.container;
@@ -25,18 +27,15 @@
       display: none;
     }
     & > ul > li {
-      padding: 1.75em .625em;
-      transition: background-color .25s;
-      &:hover {
-        background-color: v.$green;
-        a {
-          color: white;
-        }
-      }
+      padding: 1.6em 0;
       a {
-        padding: 1.75em 0;
-        transition: color .25s;
-      }
+        padding: 1.75em .625em;
+        transition: background-color .25s, color .25s;
+        &:hover, &.page-links__page-link_active {
+          background-color: v.$green;
+          color: v.$white;
+        }
+      }  
     }
   }
   &__languagues {

@@ -5,7 +5,7 @@
   line-height: 140%;
   font-size: 16px;
   padding: 0.6875em 3.75em;
-  color: white;
+  color: v.$white;
   background-color: v.$green;
   border: 2px solid v.$green;
   border-radius: 4px;
@@ -15,7 +15,7 @@
     color: v.$green;
   }
   &:disabled {
-    background-color: v.$white;
+    background-color: white;
     color: v.$grayBright;
     border-color: transparent;
     cursor: initial;

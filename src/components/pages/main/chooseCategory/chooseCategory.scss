@@ -45,9 +45,8 @@
     z-index: 1;
   }
   &__categoryName {
-    color: white;
     span {
-      color: white;
+      color: v.$white;
     }
   }
   &__arrowRight {

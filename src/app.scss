@@ -14,8 +14,11 @@ body {
   flex-direction: column;
   & > section {
     flex: 1 0 auto;
-    & > div {
+    & > div:not(:first-child) {
       @include v.distanceBetween2Components;
+    }
+    & > div:last-child, & > ul {
+      @include v.distanceBetween2Components(true);
     }
   }
 }

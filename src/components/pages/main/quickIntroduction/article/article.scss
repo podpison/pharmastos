@@ -9,7 +9,6 @@
   }
   &__articleHeading {
     font-weight: 700;
-    color: white;
     margin-bottom: 0.42em;
     position: relative;
     @media screen and (max-width: 1040px) {
@@ -42,7 +41,6 @@
     }
   }
   &__articleText {
-    color: white;
     &:last-child {
       margin-top: 0.625em;
     }
@@ -58,7 +56,7 @@
       margin-top: 1.5em;
     }
     &:hover:enabled {
-      color: white;
+      color: v.$white;
       background-color: v.$green;
     }
   }

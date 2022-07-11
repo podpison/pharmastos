@@ -31,7 +31,10 @@
     }
   }
   &__phone {
-    @include v.greenHover;
+    &:hover span {
+      color: v.$green;
+      transition: .25s;
+    }
     display: grid;
     grid-template-columns: calc(18px + 8px) 1fr;
     & > span {

@@ -4,6 +4,6 @@
   @include v.linearBackground;
   @include v.componentPaddings;
   .advantages__name, .advantages__description {
-    color: white;
+    color: v.$white;
   }
 }

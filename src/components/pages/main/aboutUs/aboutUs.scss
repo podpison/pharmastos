@@ -1,0 +1,21 @@
+.about-us__advantages {
+  .advantages__name {
+    &::before {
+      content: '';
+      background-image: url(./../../../../assets/images/favicon.png);
+      width: 140px;
+      height: 123px;
+      display: block;
+      position: absolute;
+      z-index: -1;
+      background-size: cover;
+      top: -60px;
+      left: -2px;
+      @media screen and (max-width: 1040px) {
+        inset: 5px 5px auto auto;
+        width: 80px;
+        height: 70px
+      }
+    }
+  }
+}

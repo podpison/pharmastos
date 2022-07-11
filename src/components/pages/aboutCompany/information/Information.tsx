@@ -1,5 +1,6 @@
 import "./information.scss";
 import glovesImg from "./../../../../assets/images/pages/aboutCompany/gloves.png";
+import favicon from "./../../../../assets/images/favicon.png";
 
 export const Information: React.FC = () => {
   return <div className="information">
@@ -12,6 +13,7 @@ export const Information: React.FC = () => {
     <div className="information__gloves">
       <img alt='gloves' src={glovesImg} />
       <div className="information__glovesBackground" />
+      <img alt='favicon' src={favicon} className='information__favicon' />
     </div>
   </div>
 };

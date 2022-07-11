@@ -1,18 +1,19 @@
 import "./breadcrumbs.scss";
-import arrowDownImg from "./../../../../assets/images/arrowDown.png";
 import { useLocation } from "react-router-dom";
 import { selectBreadcrumbItems } from "../../../../redux/selectors";
 import { useSelector } from "react-redux";
+import { Item } from "./item/Item";
+
 
 export const Breadcrumbs: React.FC = () => {
   const { pathname } = useLocation();
-  let items = useSelector(selectBreadcrumbItems);
-  console.log(items)
+  const contactsPageClasses = (arrow?: boolean) => pathname === '/contacts' ? !arrow ? 'text2_color_white' : 'breadcrumbs__separator_color_white' : '';
+  let items = useSelector(selectBreadcrumbItems).map((i, index, array) => <Item contactsPageClasses={contactsPageClasses} key={index} firstItem={false} {...i} />)
+
   if (pathname === '/') return <></>
 
   return <ul className="breadcrumbs">
-    <li className="text2 breadcrumbs__item">Главная</li>
-    <li className="text2 breadcrumbs__separator"><img alt='arrow' src={arrowDownImg} /></li>
-    <li className="text2 breadcrumbs__item">Контакты</li>
-   </ul>
+    <Item link="/" contactsPageClasses={contactsPageClasses} firstItem={true} name='Главная' />
+    {items}
+  </ul>
 };

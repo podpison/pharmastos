@@ -1,5 +1,15 @@
 @use "./../../../../v";
 
+@mixin overflowText($lineClamp, $maxHeight) {
+  word-break: break-all;
+  max-height: $maxHeight;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: $lineClamp;
+  -webkit-box-orient: vertical;
+}
+
 a.card {
   cursor: pointer;
 }
@@ -20,18 +30,15 @@ a.card {
     margin-bottom: 1.25em;
   }
   &__name {
+    @include overflowText(3, 72px);
     text-transform: uppercase;
     margin-bottom: 10px;
     font-weight: 500;
   }
   &__description {
+    @include overflowText(4, 95);
     line-height: 150%;
-    max-height: 72px;
-    text-overflow: ellipsis;
-    overflow: hidden;
-    display: -webkit-box;
-    -webkit-line-clamp: 4;
-    -webkit-box-orient: vertical;
+    max-height: 95px;
   }
   &__priceContainer {
     display: flex;

@@ -19,27 +19,33 @@ $background: #E5E5E5;
   }
 }
 
-@mixin linearBackground {
+@mixin linearBackground__firstComponent($firstComponentOfThePage: false) {
+  @if ($firstComponentOfThePage) {
+    height: calc(100% + 58px);
+    inset: -58px auto auto 0;
+  } @else {
+    inset: 0 auto auto 0;
+    height: 100%;
+  }
+}
+@mixin linearBackground($firstComponentOfThePage: false) {
   position: relative;
   &::before {
+    @include linearBackground__firstComponent($firstComponentOfThePage);
     background: $linear;
     opacity: .7;
     content: '';
     width: 100vw;
-    left: 0;
     margin-left: calc(50% - 50vw);
-    height: 100%;
     position: absolute;
     z-index: -1;
-    top: 0;
   }
   &__backgroundImage {
+    @include linearBackground__firstComponent($firstComponentOfThePage);
     position: absolute;
     left: calc(50% - 50vw);
     width: 100vw;
-    height: 100%;
     z-index: -2;
-    top: 0;
     object-fit: cover;
   }
 }
@@ -49,8 +55,12 @@ $background: #E5E5E5;
     color: $green;
   }
 }
-@mixin distanceBetween2Components {
-  margin-bottom: max(6.85%, 50px);
+@mixin distanceBetween2Components($viseVersa: false) {
+  @if ($viseVersa) {
+    margin-bottom: max(6.85%, 50px);
+  } @else {
+    margin-top: max(6.85%, 50px);
+  }
 }
 @mixin defaultGap {
   gap: 30px;

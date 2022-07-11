@@ -1,6 +1,7 @@
 import "./contacts.scss";
 import { Cards } from "../../ui/cards/Cards";
 import { Contacts as UIContacts } from "../../ui/contacts/Contacts";
+import { useBreadcrumbs } from "../../../hooks/useBreadcrumbs";
 
 const CardProps = {
   heading: 'Контакты',
@@ -25,7 +26,9 @@ const CardProps = {
 }
 
 export const Contacts: React.FC = () => {
-  return <section>
-    <Cards className="contactsPage__cards" button={false} {...CardProps} />
+  useBreadcrumbs({name: 'Контакты', link: 'contacts'});
+
+  return <section className="contactsPage">
+    <Cards headingColor="white" headingNumber={2} className="contactsPage__cards" button={false} {...CardProps} />
   </section>
 };

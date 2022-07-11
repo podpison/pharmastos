@@ -1,0 +1,47 @@
+@use "./../../../../v";
+
+.pagination {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 48px);
+  row-gap: 2px;
+  justify-content: center; 
+  margin-top: 30px;
+  & > li > a {
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .previous a, .next a {
+    transition: color .3s;
+    color: v.$green;
+  }
+  .previous {
+    margin-right: 1px;
+  }
+  .next {
+    margin-left: 1px;
+  }
+  &__page, .previous, .next {
+    transition: background-color .3s;
+    background-color: white;
+    &:hover, &.pagination__page_active {
+      background-color: v.$green;
+      a {
+        color: white;
+      }
+    }
+  }
+  &__pageLink, .break {
+    cursor: pointer;
+    transition: color .3s;
+    font-weight: 500;
+    color: v.$gray;
+  }
+  .break a {
+    transition: .3s;
+    &:hover {
+      color: v.$green;
+    }
+  }
+}

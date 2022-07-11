@@ -1,7 +1,6 @@
 @use "./../../../v";
 
 .cards {
-  @include v.distanceBetween2Components;
   &__headingContainer {
     display: flex;
     justify-content: space-between;
@@ -32,15 +31,26 @@
   &__items {
     @include v.defaultGap;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    @media screen and (max-width: 1040px) {
+    &.cards__items_fourCardsPerRow {
+      grid-template-columns: repeat(4, 1fr);
+      @media screen and (max-width: 1040px) {
+        grid-template-columns: repeat(3, 1fr);
+      }
+      @media screen and (max-width: 768px) {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      @media screen and (max-width: 500px) {
+        grid-template-columns: 1fr;
+      }
+    }
+    &.cards__items_threeCardsPerRow {
       grid-template-columns: repeat(3, 1fr);
-    }
-    @media screen and (max-width: 768px) {
-      grid-template-columns: repeat(2, 1fr);
-    }
-    @media screen and (max-width: 500px) {
-      grid-template-columns: 1fr;
+      @media screen and (max-width: 1040px) {
+        grid-template-columns: 1fr 1fr;
+      }
+      @media screen and (max-width: 640px) {
+        grid-template-columns: 1fr;
+      }
     }
   }
 }

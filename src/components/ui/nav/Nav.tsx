@@ -15,8 +15,8 @@ export const Nav: React.FC = () => {
   const [isBurgerOpen, setIsBurgerOpen] = useState(false);
   const changeBurgerStatus = () => setIsBurgerOpen(p => !p);
 
-  return <>
-    <nav className="nav">
+  return <nav className="nav">
+    <div className="nav__boxContainer">
       <div className="nav__box">
         <Link className="nav__logo" to='/'>
           <img alt='logo' src={logo} />
@@ -29,7 +29,7 @@ export const Nav: React.FC = () => {
         <img onClick={changeBurgerStatus} className='nav__burger-icon' src={burgerImg} alt='burger' /> {/* Menu icon by Icons8 */}
         <BurgerMenu closeBurger={changeBurgerStatus} onClose={changeBurgerStatus} open={isBurgerOpen} />
       </div>
-    </nav>
+    </div>
     <Breadcrumbs />
-  </>
+  </nav>
 };
