@@ -1,0 +1,26 @@
+.blogItem {
+  // &__box {
+
+  // }
+  // &__heading {
+    
+  // }
+  &__imgContainer {
+    margin-top: 1.25rem;
+  }
+  &__img {
+    width: 57%;
+    @media screen and (max-width: 768px) {
+      width: 100%;
+      max-height: 300px;
+    }
+  }
+  &__imgDescription {
+    margin-top: 1.25em;
+  }
+  &__changeArticleButtons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 2.5rem;
+  }
+}

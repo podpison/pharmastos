@@ -1,4 +1,3 @@
-// import "./blog.scss";
 import { useState } from "react";
 import { useBreadcrumbs } from "../../../hooks/useBreadcrumbs";
 import { Cards, CardType } from "../../ui/cards/Cards";
@@ -99,7 +98,7 @@ const news = [
 ]
 
 export const Blog: React.FC = () => {
-  useBreadcrumbs({name: 'Блог', link: 'blog'});
+  useBreadcrumbs({name: 'Блог', link: 'blog'}, true);
   const [currentItems, setCurrentItems] = useState<CardType[]>([]);
   
   return <section>

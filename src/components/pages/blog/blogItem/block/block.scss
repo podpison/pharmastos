@@ -1,0 +1,30 @@
+@use "./../../../../../v";
+
+.blogItem {
+  // &__block {
+
+  // }
+  &__blockHeading {
+    margin: 0.833em 0;
+  }
+  &__blockTexts {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  // &__blockText {
+    
+  // }
+  // &__list {
+
+  // }
+  &__listItem {
+    display: flex;
+    gap: 7px;
+    &:before {
+      content: '\00b7';
+      font-size: 55px;
+      color: v.$green;
+    }
+  }
+}

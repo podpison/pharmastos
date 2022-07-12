@@ -12,9 +12,15 @@
     align-items: center;
     justify-content: center;
   }
-  .previous a, .next a {
-    transition: color .3s;
-    color: v.$green;
+  .previous, .next {
+    &.disabled {
+      pointer-events: none;
+    }
+    a {
+      transition: color .3s;
+      color: v.$green;
+      cursor: pointer;
+    }
   }
   .previous {
     margin-right: 1px;

@@ -7,7 +7,7 @@ import { MainPage } from './components/pages/main/MainPage'
 import { NotFound } from './components/pages/notFound/NotFound'
 import { Footer } from './components/ui/footer/Footer'
 import { Nav } from './components/ui/nav/Nav'
-import { News } from './components/ui/news/News'
+import { BlogItem } from './components/pages/blog/blogItem/BlogItem'
 
 function App() {
   return (
@@ -18,6 +18,7 @@ function App() {
         <Route path='aboutCompany' element={<AboutCompany />} />
         <Route path='contacts' element={<Contacts />} />
         <Route path='blog' element={<Blog />} />
+        <Route path='blog/:blogId' element={<BlogItem />} />
         <Route path='*' element={<NotFound />} />
       </Routes>
       <Footer />

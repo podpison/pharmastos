@@ -1,7 +1,6 @@
 @use "./../../../../v";
 
 @mixin overflowText($lineClamp, $maxHeight) {
-  word-break: break-all;
   max-height: $maxHeight;
   text-overflow: ellipsis;
   overflow: hidden;
