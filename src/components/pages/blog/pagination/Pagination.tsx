@@ -1,11 +1,11 @@
 import { useEffect, useState } from "react";
 import "./pagination.scss";
 import ReactPaginate from 'react-paginate';
-import { CardType } from "../../../ui/cards/Cards";
+import { BlogItemType } from "../../../../redux/reducers/staticReducer";
 
 type Props = {
-  items: CardType[]
-  setCurrentItems: (items: CardType[]) => void
+  items: BlogItemType[]
+  setCurrentItems: (items: BlogItemType[]) => void
 }
 
 const itemsPerPage = 9

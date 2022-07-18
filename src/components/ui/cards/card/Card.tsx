@@ -10,10 +10,10 @@ type Props = {
   button: boolean | undefined
 } & CardType
 
-export const Card: React.FC<Props> = ({ id, img, name, description, price, button = true, disabledImgPaddings = false }) => {
+export const Card: React.FC<Props> = ({ link, to, id, img, name, description, price, button = true, disabledImgPaddings = false }) => {
 
-  return id
-    ? <Link to={`${id}`} className={classNameHelper('card', { disabledImgPaddings })}>
+  return link
+    ? <Link to={to ? to : `${id}`} className={classNameHelper('card', { disabledImgPaddings })}>
       <img className='card__img' alt='card' src={img} />
       <div className='card__content'>
         <p className='text card__name'>{name}</p>

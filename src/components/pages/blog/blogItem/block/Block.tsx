@@ -2,7 +2,7 @@ import "./block.scss";
 
 type BlogBlockType = {
   name: string
-  text: (string | string[])[]
+  text: (string | {array: string[]})[]
 }
 
 type Props = {
@@ -11,8 +11,8 @@ type Props = {
 
 export const Block: React.FC<Props> = ({ currentItem }) => {
   let Texts = currentItem.text.map((t, index) => {
-    if (Array.isArray(t)) {
-      let Items = t.map((i, index, array) => <li className="text text_color_gray blogItem__listItem" key={index}>{`${i}${index === array.length - 1 ? '.' : ';'}`}</li>)
+    if (typeof t === 'object') {
+      let Items = t.array.map((i, index, array) => <li className="text text_color_gray blogItem__listItem" key={index}>{`${i}${index === array.length - 1 ? '.' : ';'}`}</li>)
       return <ul className="blogItem__list" key={index}>
         {Items}
       </ul>

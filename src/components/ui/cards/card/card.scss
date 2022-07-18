@@ -1,7 +1,7 @@
 @use "./../../../../v";
 
-@mixin overflowText($lineClamp, $maxHeight) {
-  max-height: $maxHeight;
+@mixin overflowText($lineClamp, $minHeight) {
+  min-height: $minHeight;
   text-overflow: ellipsis;
   overflow: hidden;
   display: -webkit-box;
@@ -29,13 +29,13 @@ a.card {
     margin-bottom: 1.25em;
   }
   &__name {
-    @include overflowText(3, 72px);
+    @include overflowText(2, 48px);
     text-transform: uppercase;
     margin-bottom: 10px;
     font-weight: 500;
   }
   &__description {
-    @include overflowText(4, 95);
+    @include overflowText(4, 95px);
     line-height: 150%;
     max-height: 95px;
   }

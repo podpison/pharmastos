@@ -1,5 +1,7 @@
+import { useSelector } from "react-redux";
 import { Link, useParams } from "react-router-dom";
 import { useBreadcrumbs } from "../../../../hooks/useBreadcrumbs";
+import { selectBlogItems } from "../../../../redux/selectors";
 import { Button } from "../../../ui/button/Button";
 import { NotFound } from "../../notFound/NotFound";
 import { Block } from "./block/Block";
@@ -14,7 +16,7 @@ const items = [
     imgDescription: 'Перчатки Radiaxon разработаны для специалистов, работающих в условиях рентгеновского облучения. Они защищают не только от инфекций, но и от отраженного или рассеянного излучения. В состав материала входят экранирующие добавки, которые нейтрализуют вредное воздействие рентгеновских лучей.',
     content: {
       description: {
-      name: 'Описание',
+        name: 'Описание',
         text: ['Radiaxon – перчатки, разработанные с учетом требований ICRP 60, касающихся снижения локальной дозы облучения. В основе защитного средства используется материал, обеспечивающий частичное поглощение опасных доз радиоактивного излучения.', 'Перчатки создаются без использования латекса и на 100 % состоят из синтетического материала – полиизопрена. Этот тип полимеров не вызывает аллергические реакции. Дополнительно в создании защитного средства применяется оксид висмута – эта экранирующая добавка обеспечивает непроницаемость и защиту от рентгеновских лучей. При этом в составе не содержится свинец и протеины латекса, даже в минимальных количествах.']
       },
       peculiarities: {
@@ -43,19 +45,21 @@ type paramsType = {
 
 export const BlogItem: React.FC = () => {
   let { blogId } = useParams<paramsType>();
-  let blogIdNumber = Number(blogId);
-  let currentItem = items.find(i => i.id === blogIdNumber);
+  let items = useSelector(selectBlogItems);
+  let currentItem = items.find(i => i.id === blogId);
+  
+  useBreadcrumbs({ name: 'Блог', link: `/blog` });
+  useBreadcrumbs({ name: currentItem?.name, link: `/blog/${blogId}` });
 
   if (!currentItem) return <NotFound />
-
-  useBreadcrumbs({name: currentItem.name, link: `/blog/${blogId}`});
+  
   const isNewArticleButtonDisabled = (type: 'prev' | 'next') => {
-    if (type === 'prev' && blogIdNumber === 1) return true;
-    if (type === 'next' && blogIdNumber === items.length) return true;
+    if (type === 'prev' && blogId === items[0].id) return true;
+    if (type === 'next' && blogId === items.at(-1)?.id) return true;
     return false;
   };
 
-
+  let currentItemIndex = items.findIndex(i => i.id === blogId);
   let content = currentItem.content;
   let contentKeys = Object.keys(content) as (keyof typeof content)[];
   let Blocks = contentKeys.map((k, index) => <Block key={index} currentItem={content[k]} />)
@@ -69,10 +73,10 @@ export const BlogItem: React.FC = () => {
       </div>
       {Blocks}
       <div className="blogItem__changeArticleButtons">
-        <Link to={`/blog/${blogIdNumber - 1}`}>
+        <Link to={`/blog/${items[currentItemIndex - 1]?.id}`}>
           <Button disabled={isNewArticleButtonDisabled("prev")}>Предыдущая статья</Button>
         </Link>
-        <Link to={`/blog/${blogIdNumber + 1}`}>
+        <Link to={`/blog/${items[currentItemIndex + 1]?.id}`}>
           <Button disabled={isNewArticleButtonDisabled('next')}>Следующая статья</Button>
         </Link>
       </div>

@@ -1,108 +1,23 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { useSelector } from "react-redux";
 import { useBreadcrumbs } from "../../../hooks/useBreadcrumbs";
-import { Cards, CardType } from "../../ui/cards/Cards";
+import { BlogItemType } from "../../../redux/reducers/staticReducer";
+import { selectBlogItems } from "../../../redux/selectors";
+import { Cards } from "../../ui/cards/Cards";
 import { Pagination } from "./pagination/Pagination";
 
-const news = [
-  {
-    name: 'Осообенности перчаток радиационной защиты',
-    img: 'https://i.postimg.cc/D02vNcKH/Rectangle-290.png',
-    description: 'Защита от вредного воздейстия рентгеновского излучения - ключевой момент, которым нельзя пренебрегать. От этого зависит здоровье людей',
-    id: 1
-  },
-  {
-    name: 'Осообенности перчаток радиационной защиты',
-    img: 'https://i.postimg.cc/D02vNcKH/Rectangle-290.png',
-    description: 'Защита от вредного воздейстия рентгеновского излучения - ключевой момент, которым нельзя пренебрегать. От этого зависит здоровье людей',
-    id: 2
-  },
-  {
-    name: 'Осообенности перчаток радиационной защиты',
-    img: 'https://i.postimg.cc/D02vNcKH/Rectangle-290.png',
-    description: 'Защита от вредного воздейстия рентгеновского излучения - ключевой момент, которым нельзя пренебрегать. От этого зависит здоровье людей',
-    id: 3
-  },
-  {
-    name: 'Осообенности перчаток радиационной защиты',
-    img: 'https://i.postimg.cc/D02vNcKH/Rectangle-290.png',
-    description: 'Защита от вредного воздейстия рентгеновского излучения - ключевой момент, которым нельзя пренебрегать. От этого зависит здоровье людей',
-    id: 4
-  },
-  {
-    name: 'Осообенности перчаток радиационной защиты',
-    img: 'https://i.postimg.cc/D02vNcKH/Rectangle-290.png',
-    description: 'Защита от вредного воздейстия рентгеновского излучения - ключевой момент, которым нельзя пренебрегать. От этого зависит здоровье людей',
-    id: 5
-  },
-  {
-    name: 'Осообенности перчаток радиационной защиты',
-    img: 'https://i.postimg.cc/D02vNcKH/Rectangle-290.png',
-    description: 'Защита от вредного воздейстия рентгеновского излучения - ключевой момент, которым нельзя пренебрегать. От этого зависит здоровье людей',
-    id: 6
-  },
-  {
-    name: 'Осообенности перчаток радиационной защиты',
-    img: 'https://i.postimg.cc/D02vNcKH/Rectangle-290.png',
-    description: 'Защита от вредного воздейстия рентгеновского излучения - ключевой момент, которым нельзя пренебрегать. От этого зависит здоровье людей',
-    id: 7
-  },
-  {
-    name: 'Осообенности перчаток радиационной защиты',
-    img: 'https://i.postimg.cc/D02vNcKH/Rectangle-290.png',
-    description: 'Защита от вредного воздейстия рентгеновского излучения - ключевой момент, которым нельзя пренебрегать. От этого зависит здоровье людей',
-    id: 9
-  },
-  {
-    name: 'Осообенности перчаток радиационной защиты',
-    img: 'https://i.postimg.cc/D02vNcKH/Rectangle-290.png',
-    description: 'Защита от вредного воздейстия рентгеновского излучения - ключевой момент, которым нельзя пренебрегать. От этого зависит здоровье людей',
-    id: 8
-  },
-  {
-    name: 'Осообенности перчаток радиационной защиты',
-    img: 'https://i.postimg.cc/D02vNcKH/Rectangle-290.png',
-    description: 'Защита от вредного воздейстия рентгеновского излучения - ключевой момент, которым нельзя пренебрегать. От этого зависит здоровье людей',
-    id: 10
-  },
-  {
-    name: 'Осообенности перчаток радиационной защиты',
-    img: 'https://i.postimg.cc/D02vNcKH/Rectangle-290.png',
-    description: 'Защита от вредного воздейстия рентгеновского излучения - ключевой момент, которым нельзя пренебрегать. От этого зависит здоровье людей',
-    id: 11
-  },
-  {
-    name: 'Осообенности перчаток радиационной защиты',
-    img: 'https://i.postimg.cc/D02vNcKH/Rectangle-290.png',
-    description: 'Защита от вредного воздейстия рентгеновского излучения - ключевой момент, которым нельзя пренебрегать. От этого зависит здоровье людей',
-    id: 12
-  },
-  {
-    name: 'Осообенности перчаток радиационной защиты',
-    img: 'https://i.postimg.cc/D02vNcKH/Rectangle-290.png',
-    description: 'Защита от вредного воздейстия рентгеновского излучения - ключевой момент, которым нельзя пренебрегать. От этого зависит здоровье людей',
-    id: 13
-  },
-  {
-    name: 'Осообенности перчаток радиационной защиты',
-    img: 'https://i.postimg.cc/D02vNcKH/Rectangle-290.png',
-    description: 'Защита от вредного воздейстия рентгеновского излучения - ключевой момент, которым нельзя пренебрегать. От этого зависит здоровье людей',
-    id: 14
-  },
-  {
-    name: 'Осообенности перчаток радиационной защиты',
-    img: 'https://i.postimg.cc/D02vNcKH/Rectangle-290.png',
-    description: 'Защита от вредного воздейстия рентгеновского излучения - ключевой момент, которым нельзя пренебрегать. От этого зависит здоровье людей',
-    to: 'somewhere',
-    id: 15
-  },
-]
 
 export const Blog: React.FC = () => {
-  useBreadcrumbs({name: 'Блог', link: 'blog'}, true);
-  const [currentItems, setCurrentItems] = useState<CardType[]>([]);
-  
+  useBreadcrumbs({name: 'Блог', link: 'blog'});
+  let items = useSelector(selectBlogItems);
+  const [currentItems, setCurrentItems] = useState<BlogItemType[]>(items);
+
+  useEffect(() => {
+    setCurrentItems(items);
+  }, [items]);
+
   return <section>
-    <Cards threeCardsPerRow disabledImgPaddings heading="Блог" items={currentItems} headingNumber={2} />
-    <Pagination items={news} setCurrentItems={setCurrentItems} />
+    <Cards threeCardsPerRow disabledImgPaddings heading="Блог" items={items} headingNumber={2} />
+    <Pagination items={currentItems} setCurrentItems={setCurrentItems} />
   </section>
 };

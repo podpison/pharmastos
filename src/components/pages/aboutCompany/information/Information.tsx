@@ -11,7 +11,7 @@ export const Information: React.FC = () => {
       <p className="text">Продукция WRP предназначена для медицинских учреждений, стоматологических и ветеринарных центров. Также наши товары находят широкое применение на заводах пищевой, химической и фармацевтической промышленности, в домашнем хозяйстве, в салонах красоты и парикмахерских, в автосервисах и везде, где необходима защита рук.</p>
     </div>
     <div className="information__gloves">
-      <img alt='gloves' src={glovesImg} />
+      <img className="information__glovesImg" alt='gloves' src={glovesImg} />
       <div className="information__glovesBackground" />
       <img alt='favicon' src={favicon} className='information__favicon' />
     </div>

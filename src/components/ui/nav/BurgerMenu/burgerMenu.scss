@@ -78,4 +78,9 @@
   // &__burger-lngs {
   //   margin-left: 0;
   // }
+  &__phone {
+    .contacts__phone::before {
+      filter: none;
+    }
+  }
 }

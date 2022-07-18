@@ -1,9 +1,11 @@
 import { configureStore } from "@reduxjs/toolkit";
 import { breadcrumbsReducer } from "./reducers/breadcrumbsReducer";
+import { staticReducer } from "./reducers/staticReducer";
 
 export const store = configureStore({
   reducer: {
-    breadcrumbs: breadcrumbsReducer
+    breadcrumbs: breadcrumbsReducer,
+    static: staticReducer
   }
 });
 

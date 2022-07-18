@@ -6,10 +6,12 @@ import { classNameHelper } from "../../../helpers/classNameHelper";
 export type CardType = {
   name: string
   description: string | JSX.Element
-  id?: number
+  id: string
   img?: string
   price?: number
   button?: boolean
+  to?: string
+  link?: boolean
 }
 
 type Props = {
@@ -28,7 +30,7 @@ type Props = {
 }
 
 export const Cards: React.FC<Props> = ({ heading, link, items, className, headingNumber = 3, threeCardsPerRow = false, headingColor = 'black', button, disabledImgPaddings }) => {
-  let Items = items.map((i, index) => <Card {...i} button={button} disabledImgPaddings={disabledImgPaddings} key={index} />)
+  let Items = items.map(i => <Card {...i} button={button} disabledImgPaddings={disabledImgPaddings} key={i.id} />)
 
   return <div className={classNameHelper('cards', {}, className)}>
     <div className='cards__headingContainer'>

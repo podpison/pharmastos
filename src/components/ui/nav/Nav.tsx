@@ -6,10 +6,11 @@ import { Search } from "./search/Search";
 import { Basket } from "./basket/Basket";
 import { Link } from "react-router-dom";
 import { PageLinks } from "../pageLinks/PageLinks";
-import { BurgerMenu } from "./BurgerMenu/BurgerMenu";
+import { BurgerMenu } from "./burgerMenu/BurgerMenu";
 import { useState } from "react";
 import burgerImg from "./../../../assets/images/burger.png";
 import { Breadcrumbs } from "./breadcrumbs/Breadcrumbs";
+import { Contacts } from "../contacts/Contacts";
 
 export const Nav: React.FC = () => {
   const [isBurgerOpen, setIsBurgerOpen] = useState(false);
@@ -23,7 +24,7 @@ export const Nav: React.FC = () => {
         </Link>
         <PageLinks className="nav__page-links" />
         <Languages className="nav__languagues" />
-        <Phone className="nav__phone" />
+        <Contacts phoneNumbers={['(067) 570-34-89']} className='nav__phone' />
         <Search />
         <Basket />
         <img onClick={changeBurgerStatus} className='nav__burger-icon' src={burgerImg} alt='burger' /> {/* Menu icon by Icons8 */}

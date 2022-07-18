@@ -49,6 +49,9 @@
   }
   &__phone {
     margin-left: 6.25%;
+    .contacts__phone::before {
+      filter: none;
+    }
     @media screen and (max-width: 1040px) {
       margin-left: max(1.7%, 15px);
     }
