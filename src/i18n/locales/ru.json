@@ -2,8 +2,35 @@
   "mainPage": {
     "quickIntroduction": {
       "article": {
-        "viewProducts": "Посмотреть продукцию"
+        "viewProducts": "Посмотреть продукцию",
+        "heading": "ТМН-групп Украина",
+        "texts": {
+          "text1": "Уполномоченные представители ряда мировых производителей изделий медицинского назначения: WRP, Heliomed, LinkMed.",
+          "text2": "Ваш надежный партнер в области профилактики инфекций, связанных с оказанием медецинской помощи."
+        }
       }
+    },
+    "chooseCategory": {
+      "heading": "Выбирай свою категорию",
+      "categories": {
+        "nitrileGloves": "Нитриловые перчатки",
+        "medicalGloves": "Перчатки медицинские",
+        "examinationGloves": "Смотровые перчатки",
+        "foodIndustry": "Пищевая промышленность",
+        "householdGloves": "Хозяйственные перчатки",
+        "repairAndConstruction": "Ремонт и строительство"
+      }
+    },
+    "cards": {
+      "heading": "Популярные",
+      "link": "Все продукты"
     }
+  },
+  "pageLinks": {
+    "main": "Главная",
+    "ourProducts": "Наша продукция",
+    "aboutCompany": "О компании",
+    "blog": "Блог",
+    "contacts": "Контакты"
   }
 }

@@ -2,8 +2,35 @@
   "mainPage": {
     "quickIntroduction": {
       "article": {
-        "viewProducts": "Переглянути продукцiю"
+        "viewProducts": "Переглянути продукцiю",
+        "heading": "ТМН-ГРУП УКРАЇНА",
+        "texts": {
+          "text1": "Уповноважені представники низки світових виробників медичного призначення: WRP, Heliomed, LinkMed.",
+          "text2": "Ваш надійний партнер у галузі профілактики інфекцій, пов'язаних із наданням медичної допомоги."
+        }
       }
+    },
+    "chooseCategory": {
+      "heading": "Вибирай свою категорію",
+      "categories": {
+        "nitrileGloves": "Нітрилові рукавички",
+        "medicalGloves": "Рукавички медичні",
+        "examinationGloves": "Оглядові рукавички",
+        "foodIndustry": "Харчова промисловість",
+        "householdGloves": "Господарські рукавички",
+        "repairAndConstruction": "Ремонт та будівництво"
+      }
+    },
+    "cards": {
+      "heading": "Популярні",
+      "link": "Усі продукти"
     }
+  },
+  "pageLinks": {
+    "main": "Головна",
+    "ourProducts": "Наша продукція",
+    "aboutCompany": "Про компанію",
+    "blog": "Блог",
+    "contacts": "Контакти"
   }
 }

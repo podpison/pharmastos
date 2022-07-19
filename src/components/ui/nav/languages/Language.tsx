@@ -1,11 +1,17 @@
+import { useTranslation } from "react-i18next";
 import { classNameHelper } from "../../../../helpers/classNameHelper";
 
 type Props = {
-  currentLng: 'ru' | 'ua'
   lng: 'ru' | 'ua'
-  changeLng: (lng: Props['lng']) => void
 }
 
-export const Language: React.FC<Props> = ({ currentLng, lng, changeLng }) => {
-  return <button onClick={() => changeLng(lng)} className={classNameHelper('languages__language text', {disabled: lng !== currentLng})}>{lng}</button>
+export const Language: React.FC<Props> = ({ lng }) => {
+  let currentLng = localStorage.getItem('lng') || 'ru';
+  const { i18n } = useTranslation();
+  const onClick = () => {
+    i18n.changeLanguage(lng)
+    localStorage.setItem('lng', lng);
+  };
+  console.log('rerender')
+  return <button onClick={onClick} className={classNameHelper('languages__language', {disabled: lng !== currentLng}, 'text')}>{lng}</button>
 };

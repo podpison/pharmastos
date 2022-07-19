@@ -6,10 +6,10 @@ export const Article: React.FC = () => {
   const { t } = useTranslation();
 
   return <article className="quickIntroduction__article">
-    <h1 data-color="white" className="quickIntroduction__articleHeading">ТМН-групп Украина</h1>
+    <h1 data-color="white" className="quickIntroduction__articleHeading">{t('mainPage.quickIntroduction.article.heading')}</h1>
     <div className="quickIntroduction__articleTexts">
-      <p className="text text_color_white quickIntroduction__articleText">Уполномоченные представители ряда мировых производителей изделий медицинского назначения: WRP, Heliomed, LinkMed.</p>
-      <p className="text text_color_white quickIntroduction__articleText">Ваш надежный партнер в области профилактики инфекций, связанных с оказанием медецинской помощи.</p>
+      <p className="text text_color_white quickIntroduction__articleText">{t('mainPage.quickIntroduction.article.texts.text1')}</p>
+      <p className="text text_color_white quickIntroduction__articleText">{t('mainPage.quickIntroduction.article.texts.text2')}</p>
     </div>
     <Button className="quickIntroduction__articleButton">{t('mainPage.quickIntroduction.article.viewProducts')}</Button>
   </article>

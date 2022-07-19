@@ -50,7 +50,7 @@ export const MainPage: React.FC = () => {
   return <section>
     <QuickIntroduction />
     <ChooseCategory />
-    <Cards className='mainPage__cards' heading="Популярные" link={{link: 'Все продукты', path: '/somewhere'}} items={fakeProducts} />
+    <Cards className='mainPage__cards' heading="mainPage.cards.heading" link={{link: 'mainPage.cards.link', path: '/ourProducts'}} items={fakeProducts} />
     <AboutUs />
     <GloveAdvantages />
     <SubscribeForm />

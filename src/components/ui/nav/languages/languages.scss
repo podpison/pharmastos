@@ -3,10 +3,10 @@
   gap: 1vw;
   &__language {
     text-transform: uppercase;
-    cursor: initial;
+    cursor: pointer;
     &_disabled {
       opacity: 0.3;
-      cursor: pointer;
+      // cursor: pointer;
       transition: opacity .25s;
       &:hover {
         opacity: 0.5;
