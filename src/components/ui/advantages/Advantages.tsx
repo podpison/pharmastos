@@ -1,3 +1,4 @@
+import { useTranslation } from "react-i18next";
 import { classNameHelper } from "../../../helpers/classNameHelper";
 import "./advantages.scss";
 import "./advantages_linearBC.scss";
@@ -16,13 +17,15 @@ type Props = {
 }
 
 export const Advantages: React.FC<Props> = ({ heading, description, items, className, linearBC = false }) => {
-  let otherWords = heading.split(' ').slice(0, -1).join(' ')
-  let lastWord = heading.split(' ').slice(-1).join(' ')
+  const { t } = useTranslation();
+
+  let otherWords = t(heading).split(' ').slice(0, -1).join(' ');
+  let lastWord = t(heading).split(' ').slice(-1).join(' ');
 
   return <div className={classNameHelper("advantages", {linearBC}, className)}>
     <div className="advantages__descriptionContainer">
       <h3 className="advantages__name">{otherWords} <br />{lastWord}</h3>
-      <p className="text advantages__description">{description}</p>
+      <p className="text advantages__description">{t(description)}</p>
     </div>
     <div className='advantages__items'>
       <Item text={items[0].text} type={0} />

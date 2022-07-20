@@ -8,7 +8,7 @@ import { Pagination } from "./pagination/Pagination";
 
 
 export const Blog: React.FC = () => {
-  useBreadcrumbs({name: 'Блог', link: 'blog'});
+  useBreadcrumbs({name: 'pageLinks.blog', link: 'blog'});
   let items = useSelector(selectBlogItems);
   const [currentItems, setCurrentItems] = useState<BlogItemType[]>(items);
 
@@ -17,7 +17,7 @@ export const Blog: React.FC = () => {
   }, [items]);
 
   return <section>
-    <Cards threeCardsPerRow disabledImgPaddings heading="Блог" items={items} headingNumber={2} />
+    <Cards threeCardsPerRow disabledImgPaddings heading="pageLinks.blog" items={items} headingNumber={2} />
     <Pagination items={currentItems} setCurrentItems={setCurrentItems} />
   </section>
 };

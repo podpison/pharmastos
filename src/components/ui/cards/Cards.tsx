@@ -37,7 +37,7 @@ export const Cards: React.FC<Props> = ({ heading, link, items, className, headin
 
   return <div className={classNameHelper('cards', {}, className)}>
     <div className='cards__headingContainer'>
-      {headingNumber === 3 ? <h3 className='cards__heading'>{t(heading)}</h3> : <h2 data-color={headingColor} className='cards__heading'>{heading}</h2>}
+      {headingNumber === 3 ? <h3 className='cards__heading'>{t(heading)}</h3> : <h2 data-color={headingColor} className='cards__heading'>{t(heading)}</h2>}
       {link && <Link className='cards__link' to={link.path}><span className='text'>{t(link.link)}</span></Link>}
     </div>
     <div className={`cards__items ${threeCardsPerRow ? 'cards__items_threeCardsPerRow' : 'cards__items_fourCardsPerRow'}`}>

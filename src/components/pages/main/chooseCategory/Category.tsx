@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import "./chooseCategory.scss";
 import "./category_type.scss";
 import arrowLeftImg from "./../../../../assets/images/arrowRight.png";
+import { useTranslation } from "react-i18next";
 
 type Props = {
   name: string
@@ -10,6 +11,8 @@ type Props = {
 }
 
 export const Category: React.FC<Props> = ({ name, to, type }) => {
+  const { t } = useTranslation();
+
   let lastWord = name.split(' ').slice(-1).join(' ');
   let otherWords = name.split(' ').slice(0, -1).join(' ');
   
@@ -18,7 +21,7 @@ export const Category: React.FC<Props> = ({ name, to, type }) => {
       <h4 data-color='white' className="chooseCategory__categoryName">
         {otherWords}
         <br />
-        <span> {lastWord}<img className="chooseCategory__arrowRight" alt='arrow right' src={arrowLeftImg} /></span>
+        <span> {lastWord}<img className="chooseCategory__arrowRight" alt={t('mainPage.aboutUs.arrowRight')} src={arrowLeftImg} /></span>
       </h4>     
     </div>
   </Link>

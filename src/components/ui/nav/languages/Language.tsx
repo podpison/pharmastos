@@ -12,6 +12,6 @@ export const Language: React.FC<Props> = ({ lng }) => {
     i18n.changeLanguage(lng)
     localStorage.setItem('lng', lng);
   };
-  console.log('rerender')
+  
   return <button onClick={onClick} className={classNameHelper('languages__language', {disabled: lng !== currentLng}, 'text')}>{lng}</button>
 };

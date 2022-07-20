@@ -4,7 +4,7 @@ import { OurAdvantages } from "./ourAdvantages/OurAdvantages";
 import { WhatWeDo } from "./whatWeDo/WhatWeDo";
 
 export const AboutCompany: React.FC = () => {
-  useBreadcrumbs({name: 'О компании', link: 'aboutCompant'});
+  useBreadcrumbs({name: 'pageLinks.aboutCompany', link: 'aboutCompant'});
 
   return <section>
     <Information />

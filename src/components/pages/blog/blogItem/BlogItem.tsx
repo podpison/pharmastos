@@ -1,3 +1,4 @@
+import { useTranslation } from "react-i18next";
 import { useSelector } from "react-redux";
 import { Link, useParams } from "react-router-dom";
 import { useBreadcrumbs } from "../../../../hooks/useBreadcrumbs";
@@ -47,8 +48,9 @@ export const BlogItem: React.FC = () => {
   let { blogId } = useParams<paramsType>();
   let items = useSelector(selectBlogItems);
   let currentItem = items.find(i => i.id === blogId);
-  
-  useBreadcrumbs({ name: 'Блог', link: `/blog` });
+  const { t } = useTranslation();
+
+  useBreadcrumbs({ name: 'pageLinks.blog', link: `/blog` });
   useBreadcrumbs({ name: currentItem?.name, link: `/blog/${blogId}` });
 
   if (!currentItem) return <NotFound />
@@ -68,16 +70,16 @@ export const BlogItem: React.FC = () => {
     <div className="blogItem__box">
       <h3 className="blogItem__heading">{currentItem.name}</h3>
       <div className="blogItem__imgContainer">
-        <img className="blogItem__img" src={currentItem.img} alt='item' />
+        <img className="blogItem__img" src={currentItem.img} alt={t('blogItem.preview')} />
         <p className="text text_color_gray blogItem__imgDescription">{currentItem.imgDescription}</p>
       </div>
       {Blocks}
       <div className="blogItem__changeArticleButtons">
         <Link to={`/blog/${items[currentItemIndex - 1]?.id}`}>
-          <Button disabled={isNewArticleButtonDisabled("prev")}>Предыдущая статья</Button>
+          <Button disabled={isNewArticleButtonDisabled("prev")}>{t('blogItem.prevBlog')}</Button>
         </Link>
         <Link to={`/blog/${items[currentItemIndex + 1]?.id}`}>
-          <Button disabled={isNewArticleButtonDisabled('next')}>Следующая статья</Button>
+          <Button disabled={isNewArticleButtonDisabled('next')}>{t('blogItem.nextBlog')}</Button>
         </Link>
       </div>
     </div>

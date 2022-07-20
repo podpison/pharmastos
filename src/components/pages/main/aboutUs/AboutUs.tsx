@@ -3,20 +3,20 @@ import "./aboutUsItem_type.scss";
 import "./aboutUs.scss";
 
 const advantagesProps = {
-  description: 'Мы специализируемся на поставках современных качественных и профессионально подобранных медецинских изделий. В настоящее время компания занимает лидирующие позиции на рынках оптовых продаж одноразовых медецинских изделий.',
-  heading: 'ООО "ТМН-Групп Украина"',
+  heading: 'mainPage.aboutUs.heading',
+  description: 'mainPage.aboutUs.description',
   items: [
     {
-      text: 'Предлагаем исключительно высококачественный и сертифицированный товар'
+      text: 'mainPage.aboutUs.items.0'
     },
     {
-      text: '17 лет высокого стандарта обслуживания'
+      text: 'mainPage.aboutUs.items.1'
     },
     {
-      text: 'Быстрое оформление без подписок и взносов'
+      text: 'mainPage.aboutUs.items.2'
     },
     {
-      text: 'Возможность заключения долгосрочного партнерства'
+      text: 'mainPage.aboutUs.items.3'
     },
   ],
   linearBC: true
