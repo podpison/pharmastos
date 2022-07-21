@@ -2,16 +2,33 @@ import { createReducer, createAction, createAsyncThunk } from "@reduxjs/toolkit"
 import { DocumentData } from "firebase/firestore";
 import { itemsAPI } from "../../api/api";
 
-type BlogItemContentItem = {
-  name: string
-  text: (string | { array: string[] })[]
+export type RuUaTextType = {
+  ru: string
+  ua: string
+}
+export type RuUaArrayTextType = {
+  ru: {
+    array: string[]
+  }
+  ua: {
+    array: string[]
+  }
+}
+
+
+export type BlogItemContentItem = {
+  name: RuUaTextType
+  text: {
+    ru: (RuUaArrayTextType['ru'] | string)[]
+    ua: (RuUaArrayTextType['ru'] | string)[]
+  }
 }
 export type BlogItemType = {
   id: string
-  name: string
-  description: string
+  name: RuUaTextType
+  description: RuUaTextType
   img: string
-  imgDescription: string
+  imgDescription: RuUaTextType
   content: {
     [key: string]: BlogItemContentItem
   }

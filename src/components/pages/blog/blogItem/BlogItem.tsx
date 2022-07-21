@@ -1,6 +1,7 @@
 import { useTranslation } from "react-i18next";
 import { useSelector } from "react-redux";
 import { Link, useParams } from "react-router-dom";
+import { lngHelper } from "../../../../helpers/lngHelper";
 import { useBreadcrumbs } from "../../../../hooks/useBreadcrumbs";
 import { selectBlogItems } from "../../../../redux/selectors";
 import { Button } from "../../../ui/button/Button";
@@ -51,7 +52,7 @@ export const BlogItem: React.FC = () => {
   const { t } = useTranslation();
 
   useBreadcrumbs({ name: 'pageLinks.blog', link: `/blog` });
-  useBreadcrumbs({ name: currentItem?.name, link: `/blog/${blogId}` });
+  useBreadcrumbs({ name: lngHelper(currentItem?.name), link: `/blog/${blogId}` });
 
   if (!currentItem) return <NotFound />
   
@@ -68,10 +69,10 @@ export const BlogItem: React.FC = () => {
 
   return <section className="blogItem">
     <div className="blogItem__box">
-      <h3 className="blogItem__heading">{currentItem.name}</h3>
+      <h3 className="blogItem__heading">{lngHelper(currentItem.name)}</h3>
       <div className="blogItem__imgContainer">
         <img className="blogItem__img" src={currentItem.img} alt={t('blogItem.preview')} />
-        <p className="text text_color_gray blogItem__imgDescription">{currentItem.imgDescription}</p>
+        <p className="text text_color_gray blogItem__imgDescription">{lngHelper(currentItem.imgDescription)}</p>
       </div>
       {Blocks}
       <div className="blogItem__changeArticleButtons">

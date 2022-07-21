@@ -10,40 +10,64 @@ import { News } from "../../ui/news/News";
 const fakeProducts = [
   {
     img: 'https://i.postimg.cc/MTJCs8ZN/image-2.png',
-    name: 'Перчатка dermagrip ultra nitrile ls powder free',
-    description: 'Хирургические перчатки синтетические (полиизопрен). Без латекса, неопудренные, ДГД покрытие, стерильные микротекстурированные',
+    name: {
+      ru: 'Перчатка dermagrip ultra nitrile ls powder free',
+      ua: 'Перчатка dermagrip ultra nitrile ls powder free'
+    },
+    description: {
+      ru: 'Хирургические перчатки синтетические (полиизопрен). Без латекса, неопудренные, ДГД покрытие, стерильные микротекстурированные',
+      ua: 'Хирургические перчатки синтетические (полиизопрен). Без латекса, неопудренные, ДГД покрытие, стерильные микротекстурированные'
+    },
+    price: 225,
+    to: '/sykanaxyi',
+    id: '0',
+    link: true
+  }, 
+  {
+    img: 'https://i.postimg.cc/MTJCs8ZN/image-2.png',
+    name: {
+      ru: 'Перчатка dermagrip ultra nitrile ls powder free',
+      ua: 'Перчатка dermagrip ultra nitrile ls powder free'
+    },
+    description: {
+      ru: 'Хирургические перчатки синтетические (полиизопрен). Без латекса, неопудренные, ДГД покрытие, стерильные микротекстурированные',
+      ua: 'Хирургические перчатки синтетические (полиизопрен). Без латекса, неопудренные, ДГД покрытие, стерильные микротекстурированные'
+    },
     price: 225,
     to: '/sykanaxyi',
     id: '1',
     link: true
-  },
+  }, 
   {
     img: 'https://i.postimg.cc/MTJCs8ZN/image-2.png',
-    name: 'Перчатка dermagrip ultra nitrile ls powder free',
-    description: 'Хирургические перчатки синтетические (полиизопрен). Без латекса, неопудренные, ДГД покрытие, стерильные микротекстурированные',
+    name: {
+      ru: 'Перчатка dermagrip ultra nitrile ls powder free',
+      ua: 'Перчатка dermagrip ultra nitrile ls powder free'
+    },
+    description: {
+      ru: 'Хирургические перчатки синтетические (полиизопрен). Без латекса, неопудренные, ДГД покрытие, стерильные микротекстурированные',
+      ua: 'Хирургические перчатки синтетические (полиизопрен). Без латекса, неопудренные, ДГД покрытие, стерильные микротекстурированные'
+    },
     price: 225,
     to: '/sykanaxyi',
-    id: '12',
+    id: '2',
     link: true
-  },
+  }, 
   {
     img: 'https://i.postimg.cc/MTJCs8ZN/image-2.png',
-    name: 'Перчатка dermagrip ultra nitrile ls powder free',
-    description: 'Хирургические перчатки синтетические (полиизопрен). Без латекса, неопудренные, ДГД покрытие, стерильные микротекстурированные',
+    name: {
+      ru: 'Перчатка dermagrip ultra nitrile ls powder free',
+      ua: 'Перчатка dermagrip ultra nitrile ls powder free'
+    },
+    description: {
+      ru: 'Хирургические перчатки синтетические (полиизопрен). Без латекса, неопудренные, ДГД покрытие, стерильные микротекстурированные',
+      ua: 'Хирургические перчатки синтетические (полиизопрен). Без латекса, неопудренные, ДГД покрытие, стерильные микротекстурированные'
+    },
     price: 225,
     to: '/sykanaxyi',
-    id: '13',
+    id: '3',
     link: true
-  },
-  {
-    img: 'https://i.postimg.cc/MTJCs8ZN/image-2.png',
-    name: 'Перчатка dermagrip ultra nitrile ls powder free',
-    description: 'Хирургические перчатки синтетические (полиизопрен). Без латекса, неопудренные, ДГД покрытие, стерильные микротекстурированные',
-    price: 225,
-    to: '/sykanaxyi',
-    id: '14',
-    link: true
-  },
+  }, 
 ]
 
 export const MainPage: React.FC = () => {

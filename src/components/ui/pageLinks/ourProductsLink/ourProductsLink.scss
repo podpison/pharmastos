@@ -1,0 +1,14 @@
+.page-links {
+  &__our-products-link {
+    
+  }
+  &__our-products-link-name {
+    height: fit-content;
+    &::after {
+      content: "";
+      background-image: url('./../../../../assets/images/arrowDown.png');
+      width: 10px;
+      height: 3px;
+    }
+  }
+}

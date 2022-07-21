@@ -28,7 +28,7 @@
     }
     & > ul > li {
       padding: 1.6em 0;
-      a {
+      a, p {
         padding: 1.75em .625em;
         transition: background-color .25s, color .25s;
         &:hover, &.page-links__page-link_active {

@@ -3,10 +3,11 @@ import { Link } from "react-router-dom";
 import { Card } from "./card/Card";
 import { classNameHelper } from "../../../helpers/classNameHelper";
 import { useTranslation } from "react-i18next";
+import { RuUaTextType } from "../../../redux/reducers/staticReducer";
 
 export type CardType = {
-  name: string
-  description: string | JSX.Element
+  name: RuUaTextType | string
+  description: RuUaTextType | JSX.Element
   id: string
   img?: string
   price?: number
