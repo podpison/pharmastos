@@ -14,7 +14,7 @@ type Props = {
 
 export const Card: React.FC<Props> = ({ link, to, id, img, name, description = {ru: '', ua: ''}, price, button = true, disabledImgPaddings = false }) => {
   const { t } = useTranslation();
-  
+
   let descriptionToRender = isItRuUaTextType(description) ? t(lngHelper<string>(description)) : description;
 
   return link

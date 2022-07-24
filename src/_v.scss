@@ -49,10 +49,27 @@ $background: #E5E5E5;
     object-fit: cover;
   }
 }
-@mixin greenHover {
+@mixin greenHover($icon: false, $both: false) {
   transition: .25s;
-  &:hover {
-    color: $green;
+  @if ($both) {
+    &:hover {
+      &:nth-child(2n) {
+        color: $green;
+      }
+      & > img {
+        filter: invert(59%) sepia(65%) saturate(458%) hue-rotate(108deg) brightness(87%) contrast(88%);
+      }
+    }
+  } @else {
+    @if ($icon) {
+      &:hover {
+        filter: invert(59%) sepia(65%) saturate(458%) hue-rotate(108deg) brightness(87%) contrast(88%);
+      }
+    } @else {
+      &:hover {
+        color: $green;
+      }
+    }
   }
 }
 @mixin distanceBetween2Components($viseVersa: false) {

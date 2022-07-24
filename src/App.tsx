@@ -12,6 +12,7 @@ import { useInsertionEffect } from 'react'
 import { getStaticItems } from './redux/reducers/staticReducer'
 import { useDispatch } from 'react-redux'
 import { DispatchType } from './redux/store'
+import { OurProducts } from './components/pages/ourProducts/OurProducts'
 
 function App() {
   const dispatch = useDispatch<DispatchType>();
@@ -24,6 +25,7 @@ function App() {
       <Nav />
       <Routes>
         <Route path='/' element={<MainPage />} />
+        <Route path='/ourProducts/:productName' element={<OurProducts />} />
         <Route path='aboutCompany' element={<AboutCompany />} />
         <Route path='contacts' element={<Contacts />} />
         <Route path='blog' element={<Blog />} />

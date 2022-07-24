@@ -1,5 +1,9 @@
-export const OurProducts: React.FC = () => {
-  return <div>
+import { useParams } from "react-router-dom";
 
-  </div>
+export const OurProducts: React.FC = () => {
+  const { productName } = useParams()
+  
+  return <section>
+asddsa
+  </section>
 };

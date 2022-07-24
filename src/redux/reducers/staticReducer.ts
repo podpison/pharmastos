@@ -33,8 +33,62 @@ export type BlogItemType = {
     [key: string]: BlogItemContentItem
   }
 }
+
+export type ProductType = {
+  name: RuUaTextType
+  enName: string
+  img: string
+  glovesDescription: RuUaTextType
+  price: number
+  content: {
+    description: {
+      type: RuUaTextType
+      material: RuUaTextType
+      powder: RuUaTextType
+      color: RuUaTextType
+      design: RuUaTextType
+      package: RuUaTextType
+      medicalDevice: RuUaTextType
+      personalProtectiveEquipment: RuUaTextType
+      qualityAssurance: RuUaTextType
+    }
+    details: {
+      thickness: {
+        finger: string
+        palm: string
+        cuff: string
+      }[]
+      sizes: {
+        size: number
+        weight: number
+        vendorСode: string
+        palmWidth: string
+        length: string
+      }[]
+    }
+  }
+  certificate: string[]
+}
+
+export type OurProductsCategoryType = {
+  icon: string
+  name: RuUaTextType
+  items: ProductType[]
+}
+
 const initialState = {
   blog: [] as BlogItemType[],
+  ourProducts: [
+    {
+      icon: 'https://i.postimg.cc/cJTWpVV4/1.png',
+      name: {ru: 'Нитриловые перчатки', ua: 'Нiтриловые перчаткi'},
+      items: [
+        {
+          name: {ru: 'Хирургические перчатки профил®'}
+        }
+      ]
+    }
+  ] as OurProductsCategoryType[]
 }
 type StateKeysType = keyof typeof initialState
 

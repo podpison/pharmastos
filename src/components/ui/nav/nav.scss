@@ -27,15 +27,21 @@
       display: none;
     }
     & > ul > li {
-      padding: 1.6em 0;
-      a, p {
-        padding: 1.75em .625em;
-        transition: background-color .25s, color .25s;
-        &:hover, &.page-links__page-link_active {
-          background-color: v.$green;
+      transition: background-color .25s;
+      &:hover, .page-links__page-link_active {
+        background-color: v.$green;
+        color: v.$white;
+        & > a, & > p {
           color: v.$white;
         }
-      }  
+      }
+      & > a, & > p {
+        transition: color .25s;
+        padding: 1.75em .625em;
+      }
+      & a {
+        display: block;
+      }
     }
   }
   &__languagues {

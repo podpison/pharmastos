@@ -1,14 +1,58 @@
-.page-links {
-  &__our-products-link {
-    
+@use "./../../../../v";
+
+.our-products-link {
+  position: relative;
+  &:hover {
+    .our-products-link__categories {
+      display: grid;
+    }
+    .our-products-link__name {
+      &::after {
+        filter: invert(97%) sepia(100%) saturate(19%) hue-rotate(166deg) brightness(104%) contrast(100%);
+      }
+    }
   }
-  &__our-products-link-name {
-    height: fit-content;
+  &__name {
+    display: flex;
+    align-items: center;
+    gap: 5px;
     &::after {
       content: "";
+      display: block;
       background-image: url('./../../../../assets/images/arrowDown.png');
+      background-repeat: no-repeat;
       width: 10px;
-      height: 3px;
+      height: 5px;
+      transition: filter .25s;
     }
+  }
+  &__categories {
+    z-index: 5;
+    display: none;
+    position: absolute;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 13px 30px;
+    white-space: nowrap;
+    background-color: white;
+    cursor: initial;
+    max-height: 250px;
+    overflow-y: auto;
+    padding: 1.56rem;
+    box-shadow: 0 0 6px rgba(0, 0, 0, .14);
+  }
+  &__category {
+    @include v.greenHover(true);
+    display: grid;
+    gap: 0 10px;
+    grid-template-columns: 20px 1fr;
+    align-items: center;
+    justify-items: center;
+    cursor: pointer;
+  }
+  &__categoryIcon {
+    height: 20px;
+  }
+  &__categoryName {
+    
   }
 }
