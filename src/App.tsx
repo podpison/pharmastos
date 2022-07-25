@@ -8,17 +8,11 @@ import { NotFound } from './components/pages/notFound/NotFound'
 import { Footer } from './components/ui/footer/Footer'
 import { Nav } from './components/ui/nav/Nav'
 import { BlogItem } from './components/pages/blog/blogItem/BlogItem'
-import { useInsertionEffect } from 'react'
-import { getStaticItems } from './redux/reducers/staticReducer'
-import { useDispatch } from 'react-redux'
-import { DispatchType } from './redux/store'
 import { OurProducts } from './components/pages/ourProducts/OurProducts'
+import { useStaticItems } from './hooks/useStaticItems'
 
 function App() {
-  const dispatch = useDispatch<DispatchType>();
-  useInsertionEffect(() => {
-    dispatch(getStaticItems('blog'));
-  }, []);
+  useStaticItems('blog')
 
   return (
     <BrowserRouter basename='/pharmastos'>

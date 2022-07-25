@@ -40,6 +40,8 @@ export type ProductType = {
   img: string
   glovesDescription: RuUaTextType
   price: number
+  usage: RuUaTextType
+  certificate: string[]
   content: {
     description: {
       type: RuUaTextType
@@ -67,7 +69,6 @@ export type ProductType = {
       }[]
     }
   }
-  certificate: string[]
 }
 
 export type OurProductsCategoryType = {
@@ -90,7 +91,7 @@ const initialState = {
     }
   ] as OurProductsCategoryType[]
 }
-type StateKeysType = keyof typeof initialState
+export type StateKeysType = keyof typeof initialState
 
 type SetStaticItemsType = {
   items: DocumentData[]

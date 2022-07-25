@@ -1,0 +1,71 @@
+@use "./../../.././../v";
+
+.product-preview {
+  background-color: white;
+  box-shadow: 2px 2px 19px rgba(0, 0, 0, .06);
+  display: grid;
+  grid-template-columns: 250px 1fr;
+  gap: 0 1.9rem;
+  padding: 1.25rem;
+  &__content {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  &__descriptionItem {
+    & > span {
+      font-weight: bold;
+    }
+  }
+  &__sizes {
+    display: flex;
+    gap: 0 1.25rem;
+    & > ul {
+      display: flex;
+      gap: 25px;
+    }
+  }
+  &__size {
+    display: flex;
+    gap: 0 .5rem;
+    cursor: pointer;
+    & > input {
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      vertical-align: middle;
+      border: 1px solid v.$grayBright;
+      appearance: none;
+      outline: none;
+      cursor: pointer;
+      position: relative;
+      margin: 0;
+      &:checked {
+        clip-path: circle(50% at 50% 48%);
+        border: 2px solid v.$green;
+        &::before {
+          content: "";
+          display: block;
+          background-color: v.$green;
+          border-radius: 50%;
+          width: 6px;
+          height: 6px;
+          position: absolute;
+          inset: 50% 0 0 50%;
+          transform: translate(-50%, -50%);
+        }
+      }
+    }
+    & > label {
+      cursor: pointer;
+      pointer-events: none;
+    }
+  }
+  &__actions {
+    display: flex;
+    gap: 1.25rem;
+  }
+  &__action {
+    padding: 0.8125em 2.75em;
+  }
+}

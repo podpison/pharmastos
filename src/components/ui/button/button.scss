@@ -5,14 +5,20 @@
   line-height: 140%;
   font-size: 16px;
   padding: 0.6875em 3.75em;
-  color: v.$white;
   background-color: v.$green;
   border: 2px solid v.$green;
   border-radius: 4px;
   transition: all .25s;
+  color: v.$white;
+  * {
+    color: v.$white;
+  }
   &:hover:enabled {
     background-color: white;
     color: v.$green;
+    * {
+      color: v.$green;
+    }
   }
   &:disabled {
     background-color: white;

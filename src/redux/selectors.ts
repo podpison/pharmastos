@@ -10,3 +10,4 @@ export const selectBreadcrumbItems = createDraftSafeSelector(selectSelf, state =
 export const selectBlogItems = createDraftSafeSelector(selectSelf, state => {
   return state.static.blog.map(i => ({...i, link: true}));
 });
+export const selectOurProductItems = createDraftSafeSelector(selectSelf, state => state.static.ourProducts)

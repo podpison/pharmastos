@@ -1,0 +1,16 @@
+.our-products {
+  &__products {
+    display: grid;
+    grid-template-columns: 270px 1fr;
+    gap: 0 1.875rem
+  }
+  // &__heading-container {
+
+  // }
+  &__heading {
+    margin-bottom: 0.625em;
+  }
+  &__items-count {
+    margin-bottom: 1.25em;
+  }
+}
