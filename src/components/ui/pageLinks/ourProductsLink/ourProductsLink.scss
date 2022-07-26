@@ -30,8 +30,6 @@
     z-index: 5;
     display: none;
     position: absolute;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 13px 30px;
     white-space: nowrap;
     background-color: white;
     cursor: initial;
@@ -39,20 +37,9 @@
     overflow-y: auto;
     padding: 1.56rem;
     box-shadow: 0 0 6px rgba(0, 0, 0, .14);
-  }
-  &__category {
-    @include v.greenHover(true);
-    display: grid;
-    gap: 0 10px;
-    grid-template-columns: 20px 1fr;
-    align-items: center;
-    justify-items: center;
-    cursor: pointer;
-  }
-  &__categoryIcon {
-    height: 20px;
-  }
-  &__categoryName {
-    
+    gap: 13px 30px;
+    & > a:nth-child(2n) {
+      grid-column: 2;
+    }
   }
 }

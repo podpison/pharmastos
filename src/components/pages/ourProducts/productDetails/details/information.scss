@@ -1,0 +1,28 @@
+@use "./../../../../../v";
+
+.product__infromation {
+  .product__infromationHeadingContainer {
+    display: flex;
+    gap: 2.5rem;
+    border-bottom: 2px solid v.$grayBright;
+    .product__infromationHeading {
+      cursor: pointer;
+      position: relative;
+      padding-bottom: .46em;
+      &:hover, &.product_infromationHeading_active {
+        &::after {
+          content: '';
+          display: block;
+          position: absolute;
+          height: 4px;
+          background-color: v.$green;
+          width: 100%;
+          bottom: -2px;
+        }
+      }
+    }
+  }
+  .product__infromationContainer {
+    margin-top: 2rem;
+  }
+}

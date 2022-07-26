@@ -1,11 +1,14 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import { classNameHelper } from "../../../../helpers/classNameHelper";
 import { lngHelper } from "../../../../helpers/lngHelper";
 import { ProductType } from "../../../../redux/reducers/staticReducer";
 import { Button } from "../../../ui/button/Button";
 import "./productPreview.scss";
 
-export const ProductPreview: React.FC<ProductType> = ({ img, name, enName, glovesDescription, usage, content }) => {
+type Props = ProductType & {className?: string}
+
+export const ProductPreview: React.FC<Props> = ({ className, img, name, enName, glovesDescription, usage, content, id }) => {
   const [currentSize, setCurrentSize] = useState<number | null>(null);
   
   const changeCurrentSize = (size: number) => setCurrentSize(currentSize === size ? null : size);
@@ -14,8 +17,8 @@ export const ProductPreview: React.FC<ProductType> = ({ img, name, enName, glove
     <label htmlFor={String(s.size)}>{s.size}</label>
   </li>)
   
-  return <div className="product-preview">
-    <img src={img} alt='product' />
+  return <div className={classNameHelper("product-preview", {}, className)}>
+    <img className='product-preview__productImg' src={img} alt='product' />
     <div className="product-preview__content">
       <h5 className="product-preview__name">{lngHelper(name)}</h5>
       <p className="product-preview__enName text2 text2_color_grayBright">{enName}</p>
@@ -25,7 +28,7 @@ export const ProductPreview: React.FC<ProductType> = ({ img, name, enName, glove
       <div className="product-preview__actions">
         <Button disabled={currentSize === null} className="product-preview__action">В корзину</Button>
         <Button className="product-preview__action">
-          <Link to={`${name.ru}`}>Подробнее</Link>
+          <Link to={`${id}`}>Подробнее</Link>
         </Button>
       </div>
     </div>

@@ -1,0 +1,16 @@
+.product {
+  &__preview {
+    background-color: transparent;
+    grid-template-columns: 570px 1fr;
+    box-shadow: none;
+    padding: 0;
+    .product-preview__productImg {
+      height: 100%;
+    }
+    .product-preview__descriptionItem {
+      &:nth-child(2n), &:not(:nth-child(5n)) span {
+        display: none;
+      }
+    }
+  }
+}

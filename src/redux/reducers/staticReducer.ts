@@ -35,6 +35,7 @@ export type BlogItemType = {
 }
 
 export type ProductType = {
+  id: string
   name: RuUaTextType
   enName: string
   img: string
@@ -74,6 +75,7 @@ export type ProductType = {
 export type OurProductsCategoryType = {
   icon: string
   name: RuUaTextType
+  id: string
   items: ProductType[]
 }
 

@@ -18,7 +18,7 @@ export const fs = getFirestore(app);
 export const itemsAPI = {
   get: async (collection: string) => {
     const itemsSnapshot = await getDocs(fbCollection(fs, collection));
-    return itemsSnapshot.docs.map(d => d.data() as BlogItemType);
+    return itemsSnapshot.docs.map(d => ({...d.data(), id: d.id}) as BlogItemType);
   }
 };
 

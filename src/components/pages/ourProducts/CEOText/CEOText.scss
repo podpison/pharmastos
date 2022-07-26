@@ -1,0 +1,35 @@
+@use "./../../../../v";
+
+.CEO-text {
+  &__heading {
+    margin-bottom: 0.625em;
+  }
+  &__texts {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+    margin-bottom: 1.25em;
+    &.CEO-text__texts_hidden {
+      background: linear-gradient(180deg, #40474F 61%, rgba(64, 71, 79, 0) 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      height: 180px;
+      overflow: hidden;
+    }
+  }
+  // &__text {
+
+  // }
+  &__showMoreButton {
+    font-weight: 500;
+    line-height: 140%;
+    color: v.$green;
+    cursor: pointer;
+    transition: .25s;
+    &:hover {
+      text-decoration: underline;
+      text-underline-position: under;
+    }
+  }
+}

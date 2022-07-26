@@ -10,16 +10,20 @@ import { Nav } from './components/ui/nav/Nav'
 import { BlogItem } from './components/pages/blog/blogItem/BlogItem'
 import { OurProducts } from './components/pages/ourProducts/OurProducts'
 import { useStaticItems } from './hooks/useStaticItems'
+// import { Product } from './components/pages/ourProducts/product/Product'
+import { Product } from './components/pages/ourProducts/productDetails/Product'
 
 function App() {
   useStaticItems('blog')
+  useStaticItems('ourProducts')
 
   return (
     <BrowserRouter basename='/pharmastos'>
       <Nav />
       <Routes>
         <Route path='/' element={<MainPage />} />
-        <Route path='/ourProducts/:productName' element={<OurProducts />} />
+        <Route path='/ourProducts/:categoryId' element={<OurProducts />} />
+        <Route path='/ourProducts/:categoryId/:productId/*' element={<Product />} />
         <Route path='aboutCompany' element={<AboutCompany />} />
         <Route path='contacts' element={<Contacts />} />
         <Route path='blog' element={<Blog />} />

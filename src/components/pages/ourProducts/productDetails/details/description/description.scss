@@ -1,0 +1,21 @@
+@use "./../../../../../../v";
+
+.product__description {
+  .product__heading {
+    margin-bottom: .833em;
+  }
+  .product__items {
+    .product__item {
+      padding: .8125em 0;
+      border-bottom: 1px solid v.$grayBright;
+      display: flex;
+      gap: 1.5em;
+      & > span {
+        font-weight: 600;
+      }
+      &:not(span) {
+        color: v.$gray;
+      }
+    }
+  }
+}

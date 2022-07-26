@@ -10,8 +10,10 @@ type Props = {
 }
 
 export const UniqueTags: React.FC<Props> = ({ name }) => {
-  let { productName } = useParams();
-  let currentProducts = useSelector(selectOurProductItems).find(c => c.name.ru === productName)?.items
+  let { categoryId } = useParams();
+  let currentProducts = useSelector(selectOurProductItems).find(c => c.id === categoryId)?.items
+
+  if (!currentProducts?.at(0)?.content) return <></>
 
   let uniqueItems = currentProducts?.filter((value, index, self) => index === self.findIndex((i) => i.enName === value.enName)).map(f => f.content.description[name])
   let Items = uniqueItems?.map((i, index) => {

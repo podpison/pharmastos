@@ -1,17 +1,19 @@
 import { Link } from "react-router-dom"
 import { lngHelper } from "../../../../../helpers/lngHelper"
 import { RuUaTextType } from "../../../../../redux/reducers/staticReducer"
+import "./category.scss";
 
 type Props = {
   icon: string
   name: RuUaTextType
+  id: string
 }
 
-export const Category: React.FC<Props> = ({ icon, name }) => {
-  let link = `/ourProducts/${name.ru}`;
+export const Category: React.FC<Props> = ({ icon, name, id }) => {
+  let link = `/ourProducts/${id}`;
 
-  return <div className="our-products-link__category">
+  return <Link to={link} className="our-products-link__category">
     <img className="our-products-link__categoryIcon" src={icon} alt="icon" />
-    <Link to={link} className="our-products-link__categoryName">{lngHelper(name)}</Link>
-  </div>
+    <p className="our-products-link__categoryName">{lngHelper(name)}</p>
+  </Link>
 };

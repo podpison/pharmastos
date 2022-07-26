@@ -1,8 +1,12 @@
 .our-products {
-  &__products {
+  &__productsContainer {
     display: grid;
     grid-template-columns: 270px 1fr;
     gap: 0 1.875rem
+  }
+  &__products {
+    display: grid;
+    gap: 20px 0;
   }
   // &__heading-container {
 
