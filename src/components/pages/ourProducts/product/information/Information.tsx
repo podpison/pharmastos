@@ -2,7 +2,7 @@ import "./information.scss";
 import { NavLink, Routes, Route, useLocation } from "react-router-dom";
 import { Description } from "./description/Description";
 import { Details } from "./details/Details";
-import { classNameHelper } from "./../../../../../helpers/classNameHelper";
+import { classNameHelper } from "../../../../../helpers/classNameHelper";
 
 type ArticleProps = {
   name: string,
@@ -16,7 +16,7 @@ const Article: React.FC<ArticleProps> = ({ name, link }) => {
   </h4>
 };
 
-export const Infromation: React.FC = () => {
+  export const Information: React.FC = () => {
   return <div className='product__infromation'>
     <div className='product__infromationHeadingContainer'>
       <Article name='Описание' link='description' />

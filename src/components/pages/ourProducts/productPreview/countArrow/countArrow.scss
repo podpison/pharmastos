@@ -1,0 +1,14 @@
+$padding: 7px;
+
+.product-preview__items-action {
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+    &:first-child {
+    padding-right: $padding;
+  }
+  &:last-child {
+    transform: rotate(180deg);
+    padding-left: $padding;
+  }
+}

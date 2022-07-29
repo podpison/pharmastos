@@ -1,0 +1,41 @@
+@use "./../../../../../../v";
+
+.gloveAdvantages2 {
+  &__heading {
+
+  }
+  &__content {
+    margin-top: 2rem;
+    display: grid;
+    grid-template-columns: 27% 1fr;
+    .gloveAdvantages2__items1 {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      padding-right: 28px;
+      border-right: 2px solid v.$grayBright;
+      height: fit-content;
+      .gloveAdvantages2__item {
+        display: flex;
+        align-items: center;
+        gap: 1rem
+      }
+    }
+    .gloveAdvantages2__items2 {
+      margin-left: 28px;
+      display: grid;
+      gap: 24px 1rem;
+      grid-template-columns: repeat(3, 1fr);
+      .gloveAdvantages2__item {
+        &::before {
+          content: attr(data-id);
+          color: v.$green;
+          font-weight: 600;
+          font-size: 20px;
+          margin-bottom: 15px;
+          line-height: 140%;
+        }
+      }
+    }
+  }
+}

@@ -3,8 +3,9 @@ import { useBreadcrumbs } from "../../../../hooks/useBreadcrumbs";
 import { useProduct } from "../../../../hooks/useProduct";
 import { NotFound } from "../../notFound/NotFound";
 import { ProductPreview } from "../productPreview/ProductPreview";
-import { Infromation } from "./details/Infromation";
-// import { Infromation } from "./infromation/Infromation";
+import { Certificates } from "./certificates/Certificates";
+import { GloveAdvantages } from "./certificates/gloveAdvantages/GloveAdvantages";
+import { Information } from "./information/Information";
 import "./product.scss";
 
 export const Product: React.FC = () => {
@@ -16,6 +17,8 @@ export const Product: React.FC = () => {
 
   return <section className="product">
     <ProductPreview className="product__preview" {...currentProduct} />
-    <Infromation />
+    <Information />
+    {/* <Certificates /> */}
+    <GloveAdvantages />
   </section>
 };

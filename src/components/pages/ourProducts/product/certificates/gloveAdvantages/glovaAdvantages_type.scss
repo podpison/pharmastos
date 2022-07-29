@@ -1,0 +1,34 @@
+$spriteUrl: url(./../../../../../../assets/images/sprites/benefitsOfGloves2_sprite.png);
+
+.gloveAdvantages2__item {
+  &::before {
+    content: '';
+    display: block;
+  }
+}
+.gloveAdvantages2__item_type {
+  &_0 {
+    &::before {
+      width: 40px; height: 40px;
+      background: $spriteUrl -70px -10px;
+    }
+  }
+  &_1 {
+    &::before {
+      width: 40px; height: 26px;
+      background: $spriteUrl -70px -70px;
+    }
+  }
+  &_2 {
+    &::before {
+      width: 40px; height: 40px;
+      background: $spriteUrl -10px -10px;
+    }
+  }
+  &_3 {
+    &::before {
+      width: 40px; height: 27px;
+      background: $spriteUrl -10px -70px;
+    }
+  }
+}

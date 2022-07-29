@@ -21,7 +21,7 @@ export const Description: React.FC = () => {
   
   let descriptionKeys = Object.keys(description) as (keyof typeof _description)[]
 
-  let Items = descriptionKeys.map(k => <p className='product__item text'><span>{k}: </span> {lngHelper(description[k])}</p>);
+  let Items = descriptionKeys.map((k, index) => <p key={index} className='product__item text'><span>{k}: </span> {lngHelper(description[k])}</p>);
 
   return <div className='product__description'>
     <h5 className='product__heading'>Общая информация</h5>

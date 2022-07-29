@@ -10,8 +10,7 @@ import { Nav } from './components/ui/nav/Nav'
 import { BlogItem } from './components/pages/blog/blogItem/BlogItem'
 import { OurProducts } from './components/pages/ourProducts/OurProducts'
 import { useStaticItems } from './hooks/useStaticItems'
-// import { Product } from './components/pages/ourProducts/product/Product'
-import { Product } from './components/pages/ourProducts/productDetails/Product'
+import { Product } from './components/pages/ourProducts/product/Product'
 
 function App() {
   useStaticItems('blog')
