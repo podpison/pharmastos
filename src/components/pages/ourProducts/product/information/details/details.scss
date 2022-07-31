@@ -1,4 +1,20 @@
-
 .product__details {
-  
+  .product__thicknessContainer {
+    display: grid;
+    grid-template-columns: 62% 1fr;
+    .product__columnNames, .product__item {
+      grid-template-columns: 70% 1fr;
+    }
+    .product__gloveExample {
+      width: 78px;
+      height: 176px;
+      margin: auto;
+    }
+  }
+  .product__sizesContainer {
+    margin-top: 40px;
+    .product__columnNames, .product__item {
+      grid-template-columns: repeat(5, 1fr);
+    }
+  }
 }

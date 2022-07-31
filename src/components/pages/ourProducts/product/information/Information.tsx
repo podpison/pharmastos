@@ -3,6 +3,7 @@ import { NavLink, Routes, Route } from "react-router-dom";
 import { Description } from "./description/Description";
 import { Details } from "./details/Details";
 import { StorageAndUse } from "./storageAndUse/StorageAndUse";
+import { useTranslation } from "react-i18next";
 
 type ArticleProps = {
   name: string,
@@ -10,17 +11,20 @@ type ArticleProps = {
 }
 
 const Article: React.FC<ArticleProps> = ({ name, link }) => {
+  const { t } = useTranslation();
+
   return <NavLink className={({isActive}) => `product__infromationHeading ${isActive && 'product__infromationHeading_active'}`} to={link}>
-    <h4>{name}</h4>
+    <h4>{t(name)}</h4>
   </NavLink>
 };
 
   export const Information: React.FC = () => {
+
   return <div className='product__infromation'>
     <div className='product__infromationHeadingContainer'>
-      <Article name='Описание' link='description' />
-      <Article name='Детали' link="details" />
-      <Article name="Хранение / применение" link="storageAndUse" />
+      <Article name='ourProducts.information.heading.description' link='description' />
+      <Article name='ourProducts.information.heading.details' link="details" />
+      <Article name='ourProducts.information.heading.storageAndUse' link="storageAndUse" />
     </div>
     <div className='product__infromationContainer'>
       <Routes>

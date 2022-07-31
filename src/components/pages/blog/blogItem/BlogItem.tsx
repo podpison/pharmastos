@@ -52,7 +52,7 @@ export const BlogItem: React.FC = () => {
   const { t } = useTranslation();
 
   useBreadcrumbs({ name: 'pageLinks.blog', link: `/blog` });
-  useBreadcrumbs({ name: lngHelper(currentItem?.name), link: `/blog/${blogId}` });
+  useBreadcrumbs({ name: currentItem?.name, link: `/blog/${blogId}` });
 
   if (!currentItem) return <NotFound />
   

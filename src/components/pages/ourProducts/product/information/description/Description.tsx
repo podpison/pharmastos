@@ -1,8 +1,10 @@
+import { useTranslation } from "react-i18next";
 import { lngHelper } from "../../../../../../helpers/lngHelper";
 import { useProduct } from "../../../../../../hooks/useProduct";
 import "./description.scss";
 
 export const Description: React.FC = () => {
+  const { t } = useTranslation();
   let { currentProduct } = useProduct();
 
   if (!currentProduct) return <></>
@@ -21,10 +23,10 @@ export const Description: React.FC = () => {
   
   let descriptionKeys = Object.keys(description) as (keyof typeof _description)[]
 
-  let Items = descriptionKeys.map((k, index) => <p key={index} className='product__item text'><span>{k}: </span> {lngHelper(description[k])}</p>);
+  let Items = descriptionKeys.map((k, index) => <p key={index} className='product__item text'><span>{t(`ourProducts.information.description.${k}`)}: </span> {lngHelper(description[k])}</p>);
 
   return <div className='product__description'>
-    <h5 className='product__heading'>Общая информация</h5>
+    <h5 className='product__heading'>{t('ourProducts.information.description.heading')}</h5>
     <div className='product__items'>
       {Items}
     </div>

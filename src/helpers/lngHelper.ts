@@ -1,4 +1,4 @@
-import { RuUaArrayTextType, RuUaTextType } from "../redux/reducers/staticReducer";
+import { RuUaArrayTextType, RuUaTextType } from "../redux/store";
 
 //It is certainly the worst part of the whole project 
 
@@ -16,14 +16,16 @@ type TextType = RuUaTextType | RuUaArrayTextType | undefined | string | null | s
 
 export function lngHelper(text: TextType) {
     let currentLng = localStorage.getItem('lng') as LngsType || 'ru';
-    //@ts-ignore
+
     if (text === undefined) return;
-    //@ts-ignore
+
     if (text === null) return currentLng;
-    //@ts-ignore
+
     if (typeof text === 'string') return text;
-    //@ts-ignore
-    if (text.ru.array) return text[currentLng].array
+
+    if (isItRuUaArrayTextType(text)) return text[currentLng].array
+
     //@ts-ignore
     return text[currentLng];
+    // return (text as RuUaTextType)[currentLng];
 };

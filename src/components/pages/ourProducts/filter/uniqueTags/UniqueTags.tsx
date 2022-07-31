@@ -4,6 +4,7 @@ import { lngHelper } from "../../../../../helpers/lngHelper";
 import { useParams } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { selectOurProductItems } from "../../../../../redux/selectors";
+import { useTranslation } from "react-i18next";
 
 type Props = {
   name: keyof ProductType['content']['description']
@@ -11,6 +12,7 @@ type Props = {
 
 export const UniqueTags: React.FC<Props> = ({ name }) => {
   let { categoryId } = useParams();
+  const { t } = useTranslation();
   let currentProducts = useSelector(selectOurProductItems).find(c => c.id === categoryId)?.items
 
   if (!currentProducts?.at(0)?.content) return <></>
@@ -24,7 +26,7 @@ export const UniqueTags: React.FC<Props> = ({ name }) => {
   })
 
   return <div className="filter__blockContainer">
-    <p className="text filter__title">{name}</p>
+    <p className="text filter__title">{t(`ourProducts.information.description.${name}`)}</p>
     <div>
       {Items}
     </div>

@@ -1,0 +1,32 @@
+@use "./../../../../../../../v";
+
+.product__detail {
+  .product__heading {
+    margin-bottom: 1em;
+  }
+  .product__table {
+    width: 100%;
+    .product__columnNames {
+      display: grid;
+      padding-bottom: .5rem;
+      border-bottom: .5px solid v.$grayBright;
+      .product__columnName {
+        &:first-child {
+          text-align: start;
+        }
+       }
+    }
+    .product__itemsContainer {
+      margin-top: .5rem;
+      gap: .5rem;
+      display: flex;
+      flex-direction: column;
+      .product__item {
+        display: grid;
+        & > td:not(:first-child) {
+          text-align: center;
+        }
+      }
+    }
+  }
+}

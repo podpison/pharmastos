@@ -15,13 +15,13 @@ type Props = {
 export const Card: React.FC<Props> = ({ link, to, id, img, name, description = {ru: '', ua: ''}, price, button = true, disabledImgPaddings = false }) => {
   const { t } = useTranslation();
 
-  let descriptionToRender = isItRuUaTextType(description) ? t(lngHelper<string>(description)) : description;
+  let descriptionToRender = isItRuUaTextType(description) ? t(lngHelper(description)) : description;
 
   return link
     ? <Link to={to ? to : `${id}`} className={classNameHelper('card', { disabledImgPaddings })}>
       <img className='card__img' alt={t('cards.card.alt')} src={img} />
       <div className='card__content'>
-        <p className='text card__name'>{t(lngHelper<string>(name))}</p>
+        <p className='text card__name'>{t(lngHelper(name))}</p>
         <p className='card__description'>{descriptionToRender}</p>
         {price ? <div className='card__priceContainer'>
           <h5 className='card__price'>{price} ₴</h5>
@@ -31,7 +31,7 @@ export const Card: React.FC<Props> = ({ link, to, id, img, name, description = {
       </div>
     </Link>
     : <div className={classNameHelper('card', { disabledImgPaddings })}>
-      <h5 className="card__heading">{t(lngHelper<string>(name))}</h5>
+      <h5 className="card__heading">{t(lngHelper(name))}</h5>
       <div className='card__content'>
         <div className='card__description'>{descriptionToRender}</div>
         {button && <Button className='card__button'>{t('cards.card.more')}</Button>}

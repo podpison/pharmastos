@@ -1,35 +1,39 @@
+import { useTranslation } from "react-i18next";
+import { lastSymbolHelper } from "../../../../../../helpers/lastSymbolHelper";
 import "./storageAndUse.scss";
 
 const storageTexts = [
-  'Как СИЗ в клинико-диагностических, амбулаторных процедурах и осмотрах',
-  'В терапевтических и педиатрических процедурах для забора биоматериала, ухода за пациентами',
-  'Не использовать повторно',
-  'Нежелательно носить перчатки более 2 часов',
-  'Не применять при обнаружении разрывов поверхности перчатки',
-  'При длительном использовании может потребоваться дополнительный уход за кожей рук',
-  'Избегать попадания прямых солнечных лучей и флуоресцентного освещения'
+  'ourProducts.information.storageAndUse.storage.texts.1',
+  'ourProducts.information.storageAndUse.storage.texts.2',
+  'ourProducts.information.storageAndUse.storage.texts.3',
+  'ourProducts.information.storageAndUse.storage.texts.4',
+  'ourProducts.information.storageAndUse.storage.texts.5',
+  'ourProducts.information.storageAndUse.storage.texts.6',
+  'ourProducts.information.storageAndUse.storage.texts.7'
 ];
 const useTexts = [
-  'Хранить 3 года с даты изготовления при температуре 0-25°С',
-  'При температуре до 40°С срок хранения – до 2х месяцев',
-  'Не хранить вблизи генерирующего озон оборудования (например, ртутные лампы, высоковольтные электроприборы или другие, вызывающие электрические искры или разряды)',
-  'Избегать контакта с масляными антисептическими фенолами или их производными, смазками, вазелином, нефтяным спиртом, парафином или другими родственными соединениями',
-  'Перчатки не должны находиться в непосредственном контакте с такими металлами как медь, марганец и железо'
+  'ourProducts.information.storageAndUse.use.texts.1',
+  'ourProducts.information.storageAndUse.use.texts.2',
+  'ourProducts.information.storageAndUse.use.texts.3',
+  'ourProducts.information.storageAndUse.use.texts.4',
+  'ourProducts.information.storageAndUse.use.texts.5'
 ]
 
 export const StorageAndUse: React.FC = () => {
-  const StorageTexts = storageTexts.map((t, index) => <p className="text product__text" key={index}>{t}</p>);
-  const UseTexts = useTexts.map((t, index) => <p className="text product__text" key={index}>{t}</p>)
+  const { t } = useTranslation();
+
+  const StorageTexts = storageTexts.map((text, index, array) => <p className="text product__text" key={index}>{`${t(text)}${lastSymbolHelper(array, index)}`}</p>);
+  const UseTexts = useTexts.map((text, index, array) => <p className="text product__text" key={index}>{`${t(text)}${lastSymbolHelper(array, index)}`}</p>)
 
   return <div className="product__storageAndUse">
     <div className="product__inner">
-      <h5 className="product__heading">Применение</h5>
+      <h5 className="product__heading">{t('ourProducts.information.storageAndUse.storage.heading')}</h5>
       <div className="product__texts">
         {StorageTexts}
       </div>
     </div>
     <div className="product__inner">
-      <h5 className="product__heading">Использование</h5>
+      <h5 className="product__heading">{t('ourProducts.information.storageAndUse.use.heading')}</h5>
       <div className="product__texts">
         {UseTexts}
       </div>

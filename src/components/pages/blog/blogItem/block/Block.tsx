@@ -1,5 +1,7 @@
+import { lastSymbolHelper } from "../../../../../helpers/lastSymbolHelper";
 import { lngHelper } from "../../../../../helpers/lngHelper";
-import { BlogItemContentItem, RuUaArrayTextType } from "../../../../../redux/reducers/staticReducer";
+import { BlogItemContentItem } from "../../../../../redux/reducers/staticReducer";
+import { RuUaArrayTextType } from "../../../../../redux/store";
 import "./block.scss";
 
 type Props = {
@@ -11,10 +13,10 @@ const isItTypeWithArray = (item: string | RuUaArrayTextType['ru']): item is RuUa
 }
 
 export const Block: React.FC<Props> = ({ currentItem }) => {
-  let currentLng = lngHelper<null>(null)
+  let currentLng = lngHelper(null) as 'ru' | 'ua'
   let Texts = currentItem.text[currentLng].map((t, index) => {
     if (isItTypeWithArray(t)) {
-      let Items = t.array.map((i, index, array) => <li className="text text_color_gray blogItem__listItem" key={index}>{`${i}${index === array.length - 1 ? '.' : ';'}`}</li>)
+      let Items = t.array.map((i, index, array) => <li className="text text_color_gray blogItem__listItem" key={index}>{`${i}${lastSymbolHelper(array, index)}`}</li>)
       return <ul className="blogItem__list" key={index}>
         {Items}
       </ul>

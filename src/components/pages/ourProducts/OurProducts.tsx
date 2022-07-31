@@ -6,10 +6,12 @@ import "./ourProducts.scss";
 import { Filter } from "./filter/Filter";
 import { CEOText } from "./CEOText/CEOText";
 import { useProduct } from "../../../hooks/useProduct";
+import { useTranslation } from "react-i18next";
 
 export const OurProducts: React.FC = () => {
   let { currentCategory } = useProduct();
-  useBreadcrumbs({name: lngHelper(currentCategory?.name), link: `/ourProducts/${currentCategory?.id}`});
+  const { t } = useTranslation();
+  useBreadcrumbs({name: currentCategory?.name, link: `/ourProducts/${currentCategory?.id}`});
   
   if (!currentCategory) return <NotFound />
 
@@ -19,7 +21,7 @@ export const OurProducts: React.FC = () => {
     <div className='our-products__productsContainer'>
       <Filter />
       <div className="our-products__heading-container">
-        <h3 className="our-products__heading">{currentCategory?.name.ru}</h3>
+        <h3 className="our-products__heading">{lngHelper(currentCategory?.name)}</h3>
         <p className="our-products__items-count text text_color_grayBright">Предоставленно {currentCategory?.items.length} товаров</p>
       </div>
       <div className="our-products__products">{Products}</div>

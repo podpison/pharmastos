@@ -24,9 +24,9 @@ export const GloveAdvantages: React.FC = () => {
       </div>
     </div>
     <div className="gloveAdvantages__examples">
-      <img className="gloveAdvantages__example" src={example1Img} alt={t('mainPage.gloveAdvantages.alts.0')} />
-      <img className="gloveAdvantages__example" src={example2Img} alt={t('mainPage.gloveAdvantages.alts.1')} />
-      <img className="gloveAdvantages__example" src={example3Img} alt={t('mainPage.gloveAdvantages.alts.2')} />
+      <img className="gloveAdvantages__example" src={example1Img} alt={t('mainPage.gloveAdvantages.examples.0')} />
+      <img className="gloveAdvantages__example" src={example2Img} alt={t('mainPage.gloveAdvantages.examples.1')} />
+      <img className="gloveAdvantages__example" src={example3Img} alt={t('mainPage.gloveAdvantages.examples.2')} />
     </div>
   </div>
 };

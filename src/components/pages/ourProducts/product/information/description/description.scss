@@ -8,7 +8,8 @@
     .product__item {
       padding: .8125em 0;
       border-bottom: 1px solid v.$grayBright;
-      display: flex;
+      display: grid;
+      grid-template-columns: max-content 1fr;
       gap: 1.5em;
       & > span {
         font-weight: 600;

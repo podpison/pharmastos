@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom"
 import { lngHelper } from "../../../../../helpers/lngHelper"
-import { RuUaTextType } from "../../../../../redux/reducers/staticReducer"
+import { RuUaTextType } from "../../../../../redux/store";
 import "./category.scss";
 
 type Props = {

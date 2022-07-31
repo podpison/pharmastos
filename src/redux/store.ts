@@ -11,3 +11,16 @@ export const store = configureStore({
 
 export type StateType = ReturnType<typeof store.getState>;
 export type DispatchType = typeof store.dispatch;
+
+export type RuUaTextType = {
+  ru: string
+  ua: string
+}
+export type RuUaArrayTextType = {
+  ru: {
+    array: string[]
+  }
+  ua: {
+    array: string[]
+  }
+}

@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { Card } from "./card/Card";
 import { classNameHelper } from "../../../helpers/classNameHelper";
 import { useTranslation } from "react-i18next";
-import { RuUaTextType } from "../../../redux/reducers/staticReducer";
+import { RuUaTextType } from "../../../redux/store";
 
 export type CardType = {
   name: RuUaTextType | string
