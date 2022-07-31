@@ -1,0 +1,62 @@
+@use "./../../../../../v";
+
+$spriteUrl: url(./../../../../../assets/images/sprites/gloveRemovalTehnique_sprite.png);
+
+.gloveRemovalTehnique__step {
+  position: relative;
+  &::before {
+    content: '';
+    display: block;
+    width: 150px;
+    height: 150px;
+  }
+  &::after {
+    content: attr(data-id);
+    display: flex;
+    width: 30px;
+    height: 30px;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.1);
+    font-weight: 500;
+    line-height: 140%;
+    color: v.$green;
+    position: absolute;
+    background-color: white;
+    border-radius: 50%;
+    inset: -15px auto auto 10px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+  }
+}
+.gloveRemovalTehnique__step_type {
+  &_0 {
+    &::before {
+      background: $spriteUrl -5px -485px;
+    }
+  }
+  &_1 {
+    &::before {
+      background: $spriteUrl -5px -645px;
+    }
+  }
+  &_2 {
+    &::before {
+      background: $spriteUrl -5px -965px;
+    }
+  }
+  &_3 {
+    &::before {
+      background: $spriteUrl -5px -165px;
+    }
+  }
+  &_4 {
+    &::before {
+      background: $spriteUrl -5px -325px;
+    }
+  }
+  &_5 {
+    &::before {
+      background: $spriteUrl -5px -805px;
+    }
+  }
+}

@@ -9,7 +9,7 @@
       cursor: pointer;
       position: relative;
       padding-bottom: .46em;
-      &:hover, &.product_infromationHeading_active {
+      &:hover, &.product__infromationHeading_active {
         &::after {
           content: '';
           display: block;

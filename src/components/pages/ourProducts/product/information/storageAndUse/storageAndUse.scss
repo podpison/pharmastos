@@ -1,0 +1,23 @@
+@use "./../../../../../../v";
+
+.product__storageAndUse {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  @media screen and (max-width: 1040px) {
+    grid-template-columns: 1fr;
+  }
+  .product__inner {
+    .product__heading {
+      margin-bottom: 1em;
+    }
+    .product__texts {
+      display: flex;
+      flex-direction: column;
+      gap: .5rem;
+      .product__text {
+        @include v.greenDot;
+      }
+    }
+  }
+}

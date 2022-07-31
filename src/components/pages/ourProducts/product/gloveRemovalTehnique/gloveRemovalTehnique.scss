@@ -1,0 +1,22 @@
+@use "./../../../../../v";
+
+.gloveRemovalTehnique {
+  @include v.linearBackground;
+  @include v.componentPaddings;
+  &__headingContainer {
+    .gloveRemovalTehnique__heading {
+      margin-bottom: .625em;
+    }
+    .gloveRemovalTehnique__tehniqueName {
+      margin-bottom: 1.25rem;
+    }
+    // .gloveRemovalTehnique__rules {
+
+    // }
+  }
+  .gloveRemovalTehnique__steps {
+    @include v.defaultGap;
+    display: flex;
+    margin-top: 2.8125rem;
+  }
+}

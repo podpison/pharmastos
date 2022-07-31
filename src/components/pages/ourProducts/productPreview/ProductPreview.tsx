@@ -20,10 +20,7 @@ export const ProductPreview: React.FC<Props> = ({ className, img, price, name, e
     <label htmlFor={String(s.size)}>{s.size}</label>
   </li>);
   const onCountChangeHandler = (e: ChangeEvent<HTMLInputElement>) => {
-    let newValue = e.target.value
-    let numberValue = Number(newValue);
-
-    // if (newValue.includes('0') && newValue.length === 1) {setItemsCount(0); return} 
+    let numberValue = Number(e.target.value);
     setItemsCount(numberValue >= 1000 ? 999 : numberValue);
   };
   
@@ -47,23 +44,11 @@ export const ProductPreview: React.FC<Props> = ({ className, img, price, name, e
       </div>
       <div className="product-preview__actions">
         <Button disabled={currentSize === null || itemsCount === 0} className="product-preview__action">В корзину</Button>
-        {pathname.split('/').length === 3 && <Button className="product-preview__action">
-          <Link to={`${id}`}>Подробнее</Link>
-        </Button>}
+        {pathname.split('/').length === 3 && <Link to={`${id}`}>
+          <Button className="product-preview__action">Подробнее</Button>
+        </Link>
+        }
       </div>
     </div>
   </div>
 };
-// Как СИЗ в клинико-диагностических, амбулаторных процедурах и осмотрах;
-// В терапевтических и педиатрических процедурах для забора биоматериала, ухода за пациентами;
-// Не использовать повторно;
-// Нежелательно носить перчатки более 2 часов;
-// Не применять при обнаружении разрывов поверхности перчатки;
-// При длительном использовании может потребоваться дополнительный уход за кожей рук;
-// Избегать попадания прямых солнечных лучей и флуоресцентного освещения.
-
-// Хранить 3 года с даты изготовления при температуре 0-25°С;
-// При температуре до 40°С срок хранения – до 2х месяцев;
-// Не хранить вблизи генерирующего озон оборудования (например, ртутные лампы, высоковольтные электроприборы или другие, вызывающие электрические искры или разряды);
-// Избегать контакта с масляными антисептическими фенолами или их производными, смазками, вазелином, нефтяным спиртом, парафином или другими родственными соединениями;
-// Перчатки не должны находиться в непосредственном контакте с такими металлами как медь, марганец и железо. 

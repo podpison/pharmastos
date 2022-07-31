@@ -1,8 +1,8 @@
 import "./information.scss";
-import { NavLink, Routes, Route, useLocation } from "react-router-dom";
+import { NavLink, Routes, Route } from "react-router-dom";
 import { Description } from "./description/Description";
 import { Details } from "./details/Details";
-import { classNameHelper } from "../../../../../helpers/classNameHelper";
+import { StorageAndUse } from "./storageAndUse/StorageAndUse";
 
 type ArticleProps = {
   name: string,
@@ -10,10 +10,9 @@ type ArticleProps = {
 }
 
 const Article: React.FC<ArticleProps> = ({ name, link }) => {
-  const { pathname } = useLocation();
-  return <h4 className={classNameHelper('product__infromationHeading', {active: pathname.includes(link)})}>
-    <NavLink to={link}>{name}</NavLink>
-  </h4>
+  return <NavLink className={({isActive}) => `product__infromationHeading ${isActive && 'product__infromationHeading_active'}`} to={link}>
+    <h4>{name}</h4>
+  </NavLink>
 };
 
   export const Information: React.FC = () => {
@@ -28,7 +27,7 @@ const Article: React.FC<ArticleProps> = ({ name, link }) => {
         <Route path='/' element={<Description />} />
         <Route path='description' element={<Description />} />
         <Route path='details' element={<Details />} />
-        {/* <Route path='?section=description' element={<Description />} /> */}
+        <Route path='storageAndUse' element={<StorageAndUse />} />
       </Routes>
     </div>
   </div>

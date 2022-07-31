@@ -103,6 +103,8 @@
         text-align: end;
         font-size: 16px;
         margin-top: -2px;
+        cursor: pointer;
+        height: 100%;
         &:focus {
           outline: none;
         }

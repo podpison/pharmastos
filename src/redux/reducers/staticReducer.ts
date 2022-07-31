@@ -43,6 +43,7 @@ export type ProductType = {
   price: number
   usage: RuUaTextType
   certificate: string[]
+  CEOText: RuUaArrayTextType
   content: {
     description: {
       type: RuUaTextType
@@ -60,7 +61,7 @@ export type ProductType = {
         finger: string
         palm: string
         cuff: string
-      }[]
+      }
       sizes: {
         size: number
         weight: number

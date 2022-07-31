@@ -1,6 +1,7 @@
 $blue: #1764C2;
 $green: #29B384;
-$linear: linear-gradient(232.8deg, #165EBF -13.5%, #29B384 76%);
+$linear: linear-gradient(216.46deg, #1764C2 10.45%, #29B384 98.94%);
+// $linear: linear-gradient(232.8deg, #165EBF -13.5%, #29B384 76%);
 $black: #082242;
 $gray: #40474F;
 $grayBright: #ACB7C5;
@@ -97,10 +98,19 @@ $background: #E5E5E5;
     padding: max(6.85%, 20px) 0;
   }
 }
+@mixin greenDot {
+  display: flex;
+  gap: 7px;
+  &:before {
+    content: '\00b7';
+    font-size: 55px;
+    color: $green;
+  }
+}
 
-$breakpoints: (
-  sm: 640px,
-  md: 768px,
-  lg: 1024px,
-  xl: 1280px
-);
+// $breakpoints: (
+//   sm: 640px,
+//   md: 768px,
+//   lg: 1024px,
+//   xl: 1280px
+// );

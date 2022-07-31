@@ -110,6 +110,10 @@ h5 {
 		font-size: 18px;
 	}
 }
+h6 {
+	font-weight: 600;
+	line-height: 150%;
+}
 
 @mixin textColors {
 	&_color {

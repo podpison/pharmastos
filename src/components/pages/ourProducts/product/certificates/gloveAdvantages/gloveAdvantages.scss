@@ -1,9 +1,9 @@
 @use "./../../../../../../v";
 
 .gloveAdvantages2 {
-  &__heading {
+  // &__heading {
 
-  }
+  // }
   &__content {
     margin-top: 2rem;
     display: grid;
@@ -16,7 +16,8 @@
       border-right: 2px solid v.$grayBright;
       height: fit-content;
       .gloveAdvantages2__item {
-        display: flex;
+        display: grid;
+        grid-template-columns: max-content 1fr;
         align-items: center;
         gap: 1rem
       }

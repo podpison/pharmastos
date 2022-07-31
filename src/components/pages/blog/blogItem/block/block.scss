@@ -19,12 +19,6 @@
 
   // }
   &__listItem {
-    display: flex;
-    gap: 7px;
-    &:before {
-      content: '\00b7';
-      font-size: 55px;
-      color: v.$green;
-    }
+    @include v.greenDot;
   }
 }
