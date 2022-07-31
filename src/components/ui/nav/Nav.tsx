@@ -1,7 +1,6 @@
 import logo from "./../../../assets/images/logo.svg";
 import "./nav.scss"
 import { Languages } from "./languages/Languages";
-import { Phone } from "./phone/Phone";
 import { Search } from "./search/Search";
 import { Basket } from "./basket/Basket";
 import { Link } from "react-router-dom";
