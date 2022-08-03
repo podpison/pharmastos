@@ -16,6 +16,10 @@
       display: flex;
       gap: 1rem;
       .certificates__sliderArrow {
+        &:disabled {
+          opacity: .5;
+          cursor: initial;
+        }
         img {
           filter: invert(59%) sepia(65%) saturate(458%) hue-rotate(108deg) brightness(135%) contrast(97%);
         }
